@@ -15,6 +15,10 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 
+<!-- Favicon -->
+<link rel="shortcut icon" href="<?php echo get_stylesheet_uri(); ?>/images/pcurio.ico" />
+
+
 <!-- Noto Sans -->
 <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <!-- Raleway -->
@@ -26,30 +30,34 @@
 <?php wp_head(); ?>
 </head>
 
-<!-- Screenreader link -->
+<!-- Body -->
 <body <?php body_class(); ?>>
 
-<div class="fullBleed">
+<header class="fullBleed headerSection">
 	<div class="container">
-		<!-- <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2> -->
-		<!-- #Masthead -->
-		<header class="masthead" role="banner">
+
 			<div class="site-branding">
-				<div class="site-logo">
-					<img src="<?php bloginfo('template_directory'); ?>/images/bell_logo.svg">
-				</div>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title"><a href="#" class="scroll-link" data-id="top-link" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			</div>
 
+			<div class="site-logo">
+				<span class="svg-pcurio"</span>
+			</div>
+			
+			<!-- Main Nav -->
 			<nav class="main-navigation" role="navigation">
-				<button class="menu-toggle"><?php _e( 'Primary Menu', 'pcurio' ); ?></button>
 				<div class="menu-container">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 				</div>
-			</nav><!-- #site-navigation -->
-		</header><!-- #masthead -->
-	</div>
-</div>	
+			</nav><!-- /.main-navigation -->
+
+	</div> <!-- /.container -->
+</header>	
 
 
-	<div id="content" class="site-content">
+<!-- 	<div id="content" class="site-content"> -->
+
+
+
+
+

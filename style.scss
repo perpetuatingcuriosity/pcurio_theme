@@ -2,9 +2,9 @@
 //IMPORTS
 //----------------------------------------------------------------
  
-@import "_themeinfo";
-@import "_boiler";
-@import "_grid";
+@import "sass/_themeinfo";
+@import "sass/_boiler";
+@import "sass/_grid";
 
 //----------------------------------------------------------------
 //COLOURS
@@ -20,6 +20,18 @@ $darkBlue: #003641;
 $cream: #FFF6DB;
 $tan: #AA9079;
 
+//TYPICONS
+@font-face {
+  font-family: 'typicons';
+  src: url("../font/typicons.eot");
+  src: url("../font/typicons.eot?#iefix") format('embedded-opentype'),
+       url("../font/typicons.woff") format('woff'),
+       url("../font/typicons.ttf") format('truetype'),
+       url("../font/typicons.svg#typicons") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 //----------------------------------------------------------------
 //MIXINS
 //----------------------------------------------------------------
@@ -31,6 +43,11 @@ $tan: #AA9079;
 	line-height: $lh;
 	letter-spacing: $ls;
 	text-decoration: $td;
+}
+
+@mixin shiftOva ($di:inline,$fl:left) {
+	display: $di;
+	float: $fl;
 }
 
 
@@ -69,6 +86,22 @@ body {
 //----------------------------------------------------------------
 //HEADER
 //----------------------------------------------------------------
+
+.fullBleed.headerSection {
+	background-color: $red;
+}
+
+.site-branding {
+	@include column(4);
+	.site-logo {
+		@include shiftOva;
+		svg{
+			width: 5%;
+		}
+	}
+}
+
+
 
 
 

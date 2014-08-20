@@ -17,7 +17,7 @@ grunt.initConfig({
 	sass: {
 		dist:{
 			files:{
-				'css/style.css': 'css/style.scss'
+				'style.css': 'style.scss'
 			}
 		}
 	},
@@ -42,7 +42,7 @@ grunt.initConfig({
 			browsers:['last 3 version','ie 8','ie 9']
 		},
 		no_dest: {
-			src: 'css/style.css'
+			src: 'style.css'
 		}
 	},
 
@@ -69,7 +69,7 @@ grunt.initConfig({
 	//CONCATENATE FILES
 	concat: {
 		options: {
-			// separator: ';'
+			separator: ';'
 		},
 	  css: {
 	    src: ['css/*.css'],
@@ -104,17 +104,15 @@ grunt.initConfig({
 	//COPY
 	copy: {
 	  main: {
-	  	files: [
-	  		{src: ['index.html'], dest: 'production/'},
-	  		{src: ['images/**'], dest: 'production/'}
-	    ]
+	    src: 'index.html',
+	    dest: 'production/',
 	  }
 	},	  
 
 	//WATCH
 	watch: {
 		css: {
-			files: ['css/*.scss'],
+			files: ['*.scss'],
 			tasks: ['sass','autoprefixer']
 		},
 		jade: {
