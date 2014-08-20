@@ -1,0 +1,319 @@
+/*! normalize.css v1.0.0 | MIT License | git.io/normalize */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:.83em;margin:1.67em 0}h6{font-size:.75em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}p,pre{margin:1em 0}code,kbd,pre,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:75%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;*overflow:visible}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+    }
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font: 16px 'Raleway', sans-serif;
+	font-weight: 400;
+	line-height: 1.6em;
+	letter-spacing: 0.06em;
+	-webkit-font-smoothing: anti-aliased;
+	text-rendering: optimizeLegibility;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.headerpad {
+	padding: 20px 30px;
+}
+
+a {
+	color: #BE3232;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #822222;
+}
+
+h1 {
+	font-size: 14px;
+	letter-spacing: 0.08em;
+	font-weight: 700;
+	padding:none;
+}
+
+ ul {
+	padding: 0;
+}
+
+/*HEADER STARTS*/
+header {
+	position: fixed;
+	width: 100%;
+	background: #fff;
+	font-size: 12px;
+	font-weight: 400;
+	text-transform: uppercase;
+
+/*	z-index: 1;*/
+	top: 0;
+	left: 0;
+	display: block;
+}
+
+.siteTitle {
+	float: left;
+	width: 50%;
+}
+
+.siteTitle a:hover {
+	border-bottom: none;
+	color: #333;
+}
+
+.logo {
+	width: 33.33%;
+	float: left;
+	text-align: center;
+}
+
+.logo .svg { 
+	width: 15px;
+
+}
+
+/*NAVIGATION*/
+.nav {
+	width: 33.33%;
+	margin: 0;
+	float: left;
+}
+
+.nav li {
+	list-style-type: none;
+	display: inline;
+	/*padding-left: 15px;*/
+	padding-left: 15px;
+	float:right;
+	padding-top: 1em;
+}
+
+.nav li:last-child {
+	padding-left: none;
+}
+
+.nav a {
+	text-decoration: none;
+	color: #333;
+
+}
+
+.nav a:hover {
+	color: #666;
+}
+
+
+/*SPLASH STARTS*/
+.splash {
+	width: 100%;
+	background-color: #E5E5E5;
+	padding-top: 20%;
+}
+
+.container {
+	margin: 0 auto;
+	padding:0 12%;
+	text-align: center;
+}
+
+.container1 {
+ 	height: 50vh;
+ 	vertical-align: center;
+}
+
+.splash .svg {
+	width: 5%;
+}
+
+.splash .container:last-child {
+	text-align: left;
+	color: #333;
+	background-color: #fff;
+	padding-top: 30px;
+	padding-bottom: 25px;
+}
+
+.splash .container:last-child p {
+	font-size: 15px;
+}
+
+h2 {
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.myTitle {
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-top: -10px;
+	margin-bottom: 50px;
+}
+
+/*ABOUT STARTS*/
+.about {
+	padding: 60px 12%;
+	background-color: #E5E5E5;
+}
+
+.interests {
+	padding-bottom: 20px;
+	margin-top: 0;
+}
+
+.interests p {
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 1.8em;
+	padding-right: 50px;
+}
+
+.interests p:nth-child(2) {
+	font-size: 14px;
+	margin-top: -10px;
+}
+
+.interests h3 {
+	margin-bottom: 0;
+}
+
+.skills {
+	padding-bottom: 20px;
+}
+
+.skills h3 {
+	padding-bottom: 10px;
+}
+
+.skillList {
+	list-style-type: none;
+	font-size: 12px;
+	font-weight: 500;
+/*	padding-bottom: 10px;*/
+}
+
+.skillList ul {
+	margin-bottom: 50px;
+}
+
+.skillList li {
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 0 2px;
+	border: 1px solid #999;
+	margin-bottom: 10px;
+}
+
+.socialList li {
+	padding: 0;
+	border: none;
+}
+
+.socialList a {
+	display: inline-block;
+	padding: 5px 10px;
+	border: 1px solid #999;
+}
+
+.socialList a:hover {
+	border: 1px solid #BE3232;
+	color: #BE3232;
+}
+
+/*RESUME STARTS*/
+
+.resume {
+	padding: 80px 12%;
+	line-height: 1.8em;
+	background: #F0F0E4;
+}
+
+.resumeSection {
+	padding: 20px 0;
+	border-bottom: 1px solid #8C9492;
+
+}
+
+h4 {
+	font-weight: 700;
+}
+
+.dates {
+	float: right;
+	font-weight: 400;
+	padding-right: 10px;
+	/*text-transform: lowercase;*/
+}
+
+.resumeSection dd {
+	padding-bottom: 30px;
+	margin: 0;
+}
+
+h3 {
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+/*WORK STARTS…will move up later when there is actual work!*/
+.work {
+	padding: 80px 12%;
+	background: #fff;
+}
+
+/*FOOTER STARTS*/
+
+footer {
+	padding: 80px 12%;
+	text-align: center;
+	background-color: #E5E5E5;
+}
+
+footer a:hover {
+}
+
+.socialIcons i {
+	font-size: 1.5em;
+	padding: 10px 5px;
+}
+
+.otherLinks h2 {
+	text-transform: lowercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
