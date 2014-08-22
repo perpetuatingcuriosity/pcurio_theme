@@ -10,58 +10,37 @@
 
 	</div><!-- #content -->
 
-	<div class="fullBleed footerSection">
-		<div class="footerContainer">
-
-		<footer class="site-footer" role="contentinfo">
-				<!-- Footer Widgets -->
-				<section id="footer-sidebar">
-					<!-- Footer Sidebar 1 -->
-					<div id="footer-sidebar1" class="footerSidebar">
-					<?php
-					if(is_active_sidebar('footer-sidebar-1')){
-					dynamic_sidebar('footer-sidebar-1');
-					}
-					?>
-					</div>
-					<!-- Footer Sidebar 2 -->
-					<div id="footer-sidebar2" class="footerSidebar">
-					<?php
-					if(is_active_sidebar('footer-sidebar-2')){
-					dynamic_sidebar('footer-sidebar-2');
-					}
-					?>
-					</div>
-					<!-- Footer Sidebar 3 -->
-					<div id="footer-sidebar3" class="footerSidebar">
-					<?php
-					if(is_active_sidebar('footer-sidebar-3')){
-					dynamic_sidebar('footer-sidebar-3');
-					}
-					?>
-					</div>
-					<!-- Footer Sidebar 4 -->
-					<div id="footer-sidebar4" class="footerSidebar">
-					<?php
-					if(is_active_sidebar('footer-sidebar-4')){
-					dynamic_sidebar('footer-sidebar-4');
-					}
-					?>
-					</div>
-				</section>
-			</footer><!-- footer -->
-
-		</div> <!-- /.footerContainer -->
-		
+	<!-- FOOTER/CONTACT LINKS -->
+	<footer>
 		<div class="container">
-				<div class="site-info">
-					<p>&copy; <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a> | Theme by pcurio using Underscores</p>
-				</div><!-- .site-info -->
+
+		<!--Social Icons-->	
+			<div class = "socialIcons">
+				<a href="http://facebook.com/perpetuatingcuriosity">
+			    <i class="fa fa-facebook-square"></i></a>
+
+			    <a href="http://twitter.com/alexispcurio">
+			    <i class="fa fa-twitter-square"></i></a>
+
+			    <a href="https://www.linkedin.com/pub/alexandra-bain/32/703/662">
+			    <i class="fa fa-linkedin-square"></i></a>
+
+				<a href="http://vimeo.com/perpetuatingcuriosity">
+			    <i class="fa fa-vimeo-square"></i></a>
+
+			    <a href="http://soundcloud.com/perpetuatingcuriosity">
+			    <i class="fa fa-soundcloud"></i></a>
+		    </div>
+
+		<!-- Other Links -->	
+			<div class="otherLinks">
+				<h3><a href="mailto: perpetuatingcuriosity@gmail.com"> perpetuatingcuriosity@gmail.com</a></h3>
+			</div>
+
 		</div>
+	</footer> <!-- /.FOOTER-->
 
-	</div> <!-- ./fullBleed -->	
-
-<?php wp_footer(); ?>
+	<?php wp_footer(); ?>
 
 </body>
 </html>

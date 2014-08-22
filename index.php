@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<!-- SPLASH SECTION -->
+<!-- HERO SECTION -->
 <section class="hero">
 	<div class="container">
 
@@ -13,76 +13,166 @@
 	</div> <!-- /.container -->
 </section> <!-- /.hero -->
 
+<!-- ---------------------------------------------------------------- -->
+
 
 <!-- ABOUT SECTION -->
-<section class="about" id="about-link">
+<section class="fullBleed about" id="about-link">
 	<div class="container">
 
-		<!-- put custom loop for about-skills here -->
-		<!-- There are 4 sections to this loop + one with social links -->
+		<p class="intro"></p>
 		
-		<!-- Skills List -->
-		<h3><!-- enter skill title --></h3>
-		<ul class="skillSection"></ul> <!-- enter every SkillSection into UL, ANOTHER LOOP -->
+		<div class="skillSection">
+			<?php
+			$skillsQuery = new WP_Query( 
+				array( 
+					'post_type' => 'skills', 
+					// 'project_type' => $projectTerms, 
+					// 'post__not_in' => array( $post->ID )  
+					) 
+			); ?>
+			<?php if ( $skillsQuery->have_posts() ) : ?>
+
+				<?php while ($skillsQuery->have_posts()) : $skillsQuery->the_post(); ?>
+
+					<h3><?php the_title(); ?></h3>
+
+					<ul class="skillList">
+					    <?php while(the_repeater_field('skill_section')): ?>
+					        <li><?php the_sub_field('skill_name') ?></li>
+					    <?php endwhile; ?>
+					</ul>
+
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+			<?php endif; ?>
+		</div> <!-- /. skillSection -->
 		
-		<!-- Social Links -->
-		<h3><!-- enter social link title --></h3>
-		<ul class="skillSection socialSection"></ul>
+		<div class="skillSection">
+			<?php
+			$socialQuery = new WP_Query( 
+				array( 
+					'post_type' => 'social_links', 
+					// 'project_type' => $projectTerms, 
+					// 'post__not_in' => array( $post->ID )  
+					) 
+			); ?>
+
+			<?php if ( $socialQuery->have_posts() ) : ?>
+
+				<?php while ($socialQuery->have_posts()) : $socialQuery->the_post(); ?>
+
+					<h3><?php the_title(); ?></h3>
+
+					<ul class="socialList">
+					    <?php while(the_repeater_field('social_link')): ?>
+					        <li><a href="<?php the_sub_field('social_url') ?>"><?php the_sub_field('social_name') ?></a></li>
+					    <?php endwhile; ?>
+					</ul>
+				
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+			<?php endif; ?>
+		</div>
+
 
 		<!-- Mail Link -->
 		<h3>or: <a href="mailto:perpetuatingcuriosity@gmail.com">perpetuatingcuriosity@gmail.com</a></h3>
 
 		<!-- Resume Links Section -->
-		<button class="resumelink"><a href=""></a></button>
-		<button class="resumelink"><a href="https://dl.dropboxusercontent.com/u/4917239/AlexandraBain_Resume.pdf">Download PDF Resume</a></button>
+		<a href="" class="btn resumeLink">View Resume</a>
+		<a href="https://dl.dropboxusercontent.com/u/4917239/AlexandraBain_Resume.pdf" class="btn resumeLink">Get PDF</a>
 
 	</div> <!-- /.container -->
 </section> <!-- /.about -->
 
 
+<!-- ---------------------------------------------------------------- -->
+
 <!-- WORK SECTION -->
-<!-- target with archive -->
-<section class="work" id="work-link">
-	put custom loop for projects here
-</section>
+<section class="fullBleed work" id="work-link">
+	
+	<!-- Custom Project Loop for projects here -->
+	<?php
+
+	$projectQuery = new WP_Query( 
+		array( 
+			'posts_per_page' => 4, 
+			'post_type' => 'portfolio', 
+			// 'project_type' => $projectTerms, 
+			// 'post__not_in' => array( $post->ID )  
+			) 
+	); ?>
+
+	<?php if ( $projectQuery->have_posts() ) : ?>
+
+		<?php while ($projectQuery->have_posts()) : $projectQuery->the_post(); ?>
+			
+			<section class="projectPost">
+					<div class="container">	
+					<figure class="projectPreview">
+						<?php echo get_the_post_thumbnail( $post->ID); ?> 
+					</figure>
+					
+					<article class="projectDescription">
+						<h4><?php the_title(); ?></h4>
+						<h5><?php the_field('tagline'); ?></h5>
+						<p><?php the_content(); ?></p>			
+
+						<div class="buttons">
+							<a href="#" class="btn projectLink">Details</a>
+							<a href="<?php the_field('live_link'); ?>" class="btn projectLink">Live</a>
+							<a href="<?php the_field('github_link'); ?>" class="btn projectLink">GitHub</a>
+						</div>
+					</article>
+
+				</div> <!-- /.container -->
+			</section> <!-- /.projectPost -->
 
 
+		<?php endwhile; ?>
+		
+		<?php wp_reset_postdata(); ?>
+		
+<!-- 	<?php else:  ?>
+		[stuff that happens if there aren't any posts] -->
+	<?php endif; ?>
+
+
+</section> <!-- /.work -->
+
+<!-- ---------------------------------------------------------------- -->
 
 <!-- BLOG SECTION -->
-<section class="recent-blog" id="blog">
-	<?php if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post(); ?>
+<section class="fullBleed recent-blog" id="blog-link">
+	<div class="container">
+		<?php $latest_blog_posts = new WP_Query( array( 'posts_per_page' => 6 ) ); ?>
 
-			<section class="homepagePost">
-				<header>
-					<?php the_category(); ?> 
-	 				<?php the_title(); ?>
-	 			</header>
+		<?php if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post(); ?>
 
-	 			<figure style="background: url(
-	 				<?php
-	 				//Get the Thumbnail URL
-	 				$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 720,405 ), false, '' );
-	 				echo $src[0];
-	 			?>
-	 			) no-repeat center center;
-	            background-size: cover;
-	            -webkit-background-size: cover;
-	            -moz-background-size: cover; 
-	            -o-background-size: cover;">
-	 			</figure>
+				<section class="homepagePost">
+					<header>
+						<?php the_category(); ?> 
+		 				<?php the_title(); ?>
+		 			</header>
 
-	 		 	<article class = "excerpt">
-	 				<?php the_excerpt(); ?>
-	 			</article>
+		 			<figure>
+		 				<!-- get the Featured Image -->
+		 			</figure>
 
-	 			<footer>
-	 				<?php pcurio_posted_on(); ?>
-	 			</footer>
+		 		 	<article class = "excerpt">
+		 				<?php the_excerpt(); ?>
+		 			</article>
 
-			</section> <!-- /.homepagePost -->
+		 			<footer>
+		 				<?php the_date(); ?>
+		 			</footer>
 
-		<!-- Insert Loop Structure for Blog Posts  -->
-	<?php endwhile; endif; ?>
+				</section> <!-- /.homepagePost -->
+
+			<!-- Insert Loop Structure for Blog Posts  -->
+		<?php endwhile; endif; ?>
+	</div>
 </section>
 
 

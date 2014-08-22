@@ -13,12 +13,15 @@
 $red: #BE3232;
 $deepRed: #822222;
 $lightGray: #EDEDED;
+$heroGray: #E5E5E5;
+$darkGray: #444;
 
 $blue: #00AEDA;
 $blueAlt: #31BFFF;
 $darkBlue: #003641;
 $cream: #FFF6DB;
 $tan: #AA9079;
+$pink: #EA6B6B;
 
 //TYPICONS
 @font-face {
@@ -36,8 +39,8 @@ $tan: #AA9079;
 //MIXINS
 //----------------------------------------------------------------
 
-@mixin fontify ($fz, $fw, $lh:1.5em, $ls:0.06em, $td:none) {
-	font-family: 'Source Sans Pro', 'Georgia', serif;
+@mixin fontify ($fz, $fw, $lh:1.6em, $ls:0.05em, $td:none) {
+	// font-family: 'Raleway', sans-serif;
 	font-size: $fz;
 	font-weight: $fw;
 	line-height: $lh;
@@ -58,15 +61,18 @@ $tan: #AA9079;
 //----------------------------------------------------------------
 
 body {
-	-webkit-font-smoothing: anti-aliased;
-	text-rendering: optimizeLegibility;
+	@include fontify(16px,400);
+	font-family: 'Raleway', sans-serif;
+	// -webkit-font-smoothing: antialiased;
+	// text-rendering: optimizeLegibility;
 }
 
-//font fanciness for headers and whatnot
-// h1,h2,h3,h4,h5,h6 {
-// 	-webkit-font-smoothing: antialiased;
-// 	text-rendering: optimizeLegibility;
-// }
+// font fanciness for headers and whatnot
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Noto Sans',sans-serif;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
 
 //CONTAINERS
 .fullBleed {
@@ -76,32 +82,326 @@ body {
 		max-width: 1200px;
 		margin: 0 auto;
 		width: 100%;
-		float: left;
-		padding: 25px;
+		padding: 50px;
 	}
 }
 
+a {
+	color: $red;
+	text-decoration: none;
+	&:visited {
+		color: $red;
+	}
+	&:hover {
+		color: $deepRed;
+	}
+}
+
+h1 {
+	@include fontify(1.25em,700);
+	font-family: 'Raleway', sans-serif;
+	text-transform: uppercase;	
+	margin:0;
+}
+
+h2 {
+	@include fontify(1em,700);
+	font-family: 'Raleway', sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 0;
+}
+
+h3 {
+	@include fontify(0.75em,700);
+	font-family: 'Raleway', sans-serif;
+	text-transform: uppercase;
+	margin-top: 0;
+}
+
+h4 {
+	@include fontify(1.25em,700);
+	margin-top: 0;
+}
+
+h5 {
+	@include fontify(1em,700);
+	margin:0;
+}
+
+// p {
+// 	font-family: 'Noto Sans',sans-serif;
+// }
+
+ul {
+	padding: 0;
+	li {
+		list-style-type: none;
+		margin:0;
+	}
+}
+
+.btn {
+	@include fontify(0.6em,700,inherit,0.15em);
+	text-transform: uppercase;
+	padding: 10px 15px;
+	// border-radius: 3px;
+	background-color: $darkBlue;
+	transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+	color: white;
+	&:visited {
+		color: white;
+	}
+	&:hover {
+		color: white;
+		background-color: $blue;
+	}
+}
 
 
 //----------------------------------------------------------------
 //HEADER
 //----------------------------------------------------------------
 
-.fullBleed.headerSection {
-	background-color: $red;
+header.fullBleed.headerSection {
+	font-family: 'Raleway', sans-serif;
+	position: fixed;
+	background-color: $heroGray;
+	@include fontify(0.75em,inherit);
+	.container {
+		padding: 10px;
+		overflow: hidden;
+	}
+	text-transform: uppercase;
+	a {
+		color: black;
+		text-decoration: none;
+		&:visited {
+			color: black;
+		}
+		&:hover {
+			color: $darkGray;
+		}
+	}	
+}
+
+.site-title {
+	padding: 10px;
 }
 
 .site-branding {
 	@include column(4);
-	.site-logo {
-		@include shiftOva;
-		svg{
-			width: 5%;
+}
+
+.site-logo {
+	@include column(4);
+	text-align: center;
+	padding-top: 5px;
+	svg{
+		width: 15px;
+		height: 100%;
+		display: none;
+	}
+}
+
+nav.main-navigation {
+	@include column(4);
+	ul {
+		padding: 0;
+		float:right;
+		li {			
+			list-style-type:none;
+			float: left;
+			display: inline;
+			a {
+				padding: 15px;
+			}
 		}
 	}
 }
 
 
+//MOBILE NAV
+nav.mobile-navigation {
+	display:none;
+}
+
+//----------------------------------------------------------------
+//HERO
+//----------------------------------------------------------------
+
+section.hero {
+	background-color: $heroGray;
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 275px;
+	padding-bottom: 375px;
+	.heroWrap {
+
+		svg {
+			width: 4.5%;
+			height: 100%;
+		}
+	}
+}
+
+.myTitle {
+	@include fontify(0.85em,400);
+	margin: 0;
+}
+
+
+//----------------------------------------------------------------
+//ABOUT SECTION
+//----------------------------------------------------------------
+
+section.about {
+	p.intro {
+
+	}
+	.skillSection {
+		margin-bottom: 50px;
+	}
+
+	.skillList {
+		margin-bottom: 25px;
+			li {
+			@include fontify(0.75em,500);
+			display: inline-block;
+			padding: 10px 15px;
+			margin-right: 2px;
+			border: 1px solid #999;
+			margin-bottom: 10px;
+		}
+	}
+	.socialList {
+		margin-bottom: 50px;
+	}
+	.socialList li {
+		@include fontify(0.75em,500);
+		display: inline-block;
+		margin: 0;
+			a {
+			padding: 10px 15px;
+			margin-right: 2px;
+			border: 1px solid #999;
+			margin-bottom: 10px;	
+			&:hover {
+				color: $red;
+				border: 1px solid #BE3232;
+			}	
+		}
+	}
+
+}
+
+//----------------------------------------------------------------
+//WORK SECTION
+//----------------------------------------------------------------
+
+section.work {
+	
+}
+
+.projectPost {
+	@include shiftOva;
+	width: 100%;
+	background-color: $pink;
+	.container {
+		@include shiftOva;
+		width: 100%;
+	}
+	//Featured Image
+	figure.projectPreview {
+		@include column(6);
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	//Project Description
+	article.projectDescription {
+		@include column(6);
+		p {
+			@include fontify(1em,400);
+			font-family: 'Noto Sans';
+		}
+	}	
+
+}
+
+
+
+
+//----------------------------------------------------------------
+//BLOG SECTION
+//----------------------------------------------------------------
+
+
+//Single Post
+.homepagePost {
+	@include column(4);
+	margin-bottom: 15px;
+	box-shadow: 0px 0px 3px $lightGray;
+	p {
+		margin-bottom: 0;
+	}
+	header {
+		clear: none;
+		padding: 20px;
+		padding-right: 50px;
+		font-weight: 700;
+		text-transform: uppercase;
+		background-color: white; 
+		.post-categories { //this is generated by WordPress (the_category)
+			margin: 0;
+			padding: 0;
+			@include fontify(0.75em,400);
+			li {
+				list-style-type: none;
+				margin: 0;
+			}
+		}
+
+	}
+	figure {
+		clear: none;
+		width: 100%;
+		height: 200px;
+		overflow: hidden;
+		img {
+		width: 100%;
+		}
+	}
+	article {
+		clear: none;
+		padding: 20px 20px 0px 20px;
+		background-color: white;
+		color: #555;
+		.read-more {
+			@include fontify(0.75em,700);
+			text-transform: uppercase;	
+		}
+	}
+	footer {
+		clear: none;
+		@include fontify(14px,700);
+		padding: 20px;
+		background-color: white;
+		-webkit-border-bottom-left-radius: 5px;
+		-webkit-border-bottom-right-radius: 5px;
+	}
+}
+
+
+//----------------------------------------------------------------
+//FOOTER
+//----------------------------------------------------------------
+
+
+footer {
+	clear:both;
+}
 
 
 

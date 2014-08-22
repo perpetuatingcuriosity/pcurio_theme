@@ -1,17 +1,17 @@
 <?php
 
 function pcurio_scripts_method() {
-  wp_enqueue_script(
-    'pcurio_js', //handle
-    get_stylesheet_directory_uri() . '/js/pcurio.js', //source
-    array( 'jquery' ), //dependencies
-    null, // version number
-    true //load in footer
-  );
+  // wp_enqueue_script(
+  //   'pcurio_js', //handle
+  //   get_stylesheet_directory_uri() . '/js/pcurio.js', //source
+  //   array( 'jquery' ), //dependencies
+  //   null, // version number
+  //   true //load in footer
+  // );
 
   wp_enqueue_script(
     'smoothscroll', //handle
-    get_stylesheet_directory_uri() . '/js/smoothscroll.js', //source
+    get_template_directory_uri() . '/js/smoothscroll.js', //source
     array( 'jquery' ), //dependencies
     null, // version number
     true //load in footer
@@ -19,7 +19,7 @@ function pcurio_scripts_method() {
 
   wp_enqueue_script(
     'svginject', //handle
-    get_stylesheet_directory_uri() . '/js/SVGinject.js', //source
+    get_template_directory_uri() . '/js/SVGinject.js', //source
     array( 'jquery' ), //dependencies
     null, // version number
     true //load in footer
@@ -28,6 +28,7 @@ function pcurio_scripts_method() {
 }
 
 add_action( 'wp_enqueue_scripts', 'pcurio_scripts_method' );
+
 
 // Add theme support for Featured Image
 add_theme_support( 'post-thumbnails' );
@@ -91,9 +92,11 @@ add_action( 'widgets_init', 'pcurio_widgets_init' );
 
 //----------------------------------------------------------------
 //DEALING WITH JQUERY (load at bottom of page rather than top)
-wp_deregister_script('jquery');
-wp_register_script('jquery');
-wp_enqueue_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"), false, '1.3.2', true);
+add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
 
-
+function my_jquery_enqueue() {
+   wp_deregister_script('jquery');
+   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", false, null, true);
+   wp_enqueue_script('jquery');
+}
 ?>
