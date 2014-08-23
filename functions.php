@@ -36,6 +36,11 @@ add_theme_support( 'post-thumbnails' );
 //register our nav menu
 register_nav_menu('primary','Main Menu');
 
+//Excerpt read more link
+function new_excerpt_more( $more ) {
+  return '&#8230;' . '<a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read&nbsp;More', 'your-text-domain') . '</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 //Register Sidebar Widget Area and Footer Widget Areas
 function pcurio_widgets_init() {

@@ -17,10 +17,20 @@
 
 
 <!-- ABOUT SECTION -->
-<section class="fullBleed about" id="about-link">
+<section class="fullBleed sectionTitle aboutTitle" id="about-link">
+<!-- 	<div class="container">
+		<h3>about</h3>
+	</div> -->
+</section>
+
+<section class="fullBleed about">
 	<div class="container">
 
-		<p class="intro"></p>
+		<p class="intro"><?php the_author_meta( 'description', '1' ); ?> </p>
+		
+		<!-- <p class="intro">I’m most passionate about using my skills design and development to create solutions to problems that aren’t limited to print or digital.
+		<span>(Not-so-secret ambition: design for large-scale human systems.)</span>
+		My superpower is my ability to discover, recall and apply information.</p> -->
 		
 		<div class="skillSection">
 			<?php
@@ -34,7 +44,6 @@
 			<?php if ( $skillsQuery->have_posts() ) : ?>
 
 				<?php while ($skillsQuery->have_posts()) : $skillsQuery->the_post(); ?>
-
 					<h3><?php the_title(); ?></h3>
 
 					<ul class="skillList">
@@ -64,7 +73,7 @@
 
 					<h3><?php the_title(); ?></h3>
 
-					<ul class="socialList">
+					<ul class="skillList socialList">
 					    <?php while(the_repeater_field('social_link')): ?>
 					        <li><a href="<?php the_sub_field('social_url') ?>"><?php the_sub_field('social_name') ?></a></li>
 					    <?php endwhile; ?>
@@ -80,8 +89,11 @@
 		<h3>or: <a href="mailto:perpetuatingcuriosity@gmail.com">perpetuatingcuriosity@gmail.com</a></h3>
 
 		<!-- Resume Links Section -->
-		<a href="" class="btn resumeLink">View Resume</a>
-		<a href="https://dl.dropboxusercontent.com/u/4917239/AlexandraBain_Resume.pdf" class="btn resumeLink">Get PDF</a>
+		<div class="resumeLinks">
+			<h3></h3>
+			<a href="" class="btn resumeLink">View Resume</a>
+			<a href="https://dl.dropboxusercontent.com/u/4917239/AlexandraBain_Resume.pdf" class="btn resumeLink">Get PDF</a>
+		</div>
 
 	</div> <!-- /.container -->
 </section> <!-- /.about -->
@@ -144,7 +156,7 @@
 <!-- ---------------------------------------------------------------- -->
 
 <!-- BLOG SECTION -->
-<section class="fullBleed recent-blog" id="blog-link">
+<section class="fullBleed blog" id="blog-link">
 	<div class="container">
 		<?php $latest_blog_posts = new WP_Query( array( 'posts_per_page' => 6 ) ); ?>
 
@@ -156,16 +168,16 @@
 		 				<?php the_title(); ?>
 		 			</header>
 
-		 			<figure>
-		 				<!-- get the Featured Image -->
-		 			</figure>
+		 			<!-- <figure>
+		 				get the Featured Image
+		 			</figure> -->
 
 		 		 	<article class = "excerpt">
 		 				<?php the_excerpt(); ?>
 		 			</article>
 
 		 			<footer>
-		 				<?php the_date(); ?>
+		 			<!-- 	<?php the_date(); ?> -->
 		 			</footer>
 
 				</section> <!-- /.homepagePost -->

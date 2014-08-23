@@ -163,7 +163,6 @@ body {
   font-family: 'Raleway', sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Noto Sans',sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
 
@@ -171,10 +170,20 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   float: left; }
   .fullBleed .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     width: 100%;
-    padding: 50px; }
+    padding: 50px;
+    overflow: hidden; }
+
+.fullBleed.sectionTitle {
+  text-align: center;
+  background-color: #aa9079;
+  color: white; }
+  .fullBleed.sectionTitle .container {
+    padding: 25px; }
+    .fullBleed.sectionTitle .container h3 {
+      margin: 0; }
 
 a {
   color: #be3232;
@@ -332,8 +341,17 @@ section.hero {
   text-decoration: none;
   margin: 0; }
 
+section.about p.intro {
+  font-size: 1.25em;
+  font-weight: 300;
+  line-height: 1.8em;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  padding-right: 50px;
+  margin: 50px 0; }
 section.about .skillSection {
-  margin-bottom: 50px; }
+  margin-bottom: 30px;
+  padding-right: 200px; }
 section.about .skillList {
   margin-bottom: 25px; }
   section.about .skillList li {
@@ -347,8 +365,6 @@ section.about .skillList {
     margin-right: 2px;
     border: 1px solid #999;
     margin-bottom: 10px; }
-section.about .socialList {
-  margin-bottom: 50px; }
 section.about .socialList li {
   font-size: 0.75em;
   font-weight: 500;
@@ -356,12 +372,14 @@ section.about .socialList li {
   letter-spacing: 0.05em;
   text-decoration: none;
   display: inline-block;
-  margin: 0; }
+  margin: 0;
+  margin-right: 2px;
+  padding: 0;
+  border: none; }
   section.about .socialList li a {
+    display: inline-block;
     padding: 10px 15px;
-    margin-right: 2px;
-    border: 1px solid #999;
-    margin-bottom: 10px; }
+    border: 1px solid #999; }
     section.about .socialList li a:hover {
       color: #be3232;
       border: 1px solid #BE3232; }
@@ -396,13 +414,18 @@ section.about .socialList li {
       text-decoration: none;
       font-family: 'Noto Sans'; }
 
+.fullBleed.blog {
+  background-color: #e5e5e5; }
+
 .homepagePost {
   display: inline;
   float: left;
   width: 31.25%;
   margin: 0 1.04167%;
   margin-bottom: 15px;
-  box-shadow: 0px 0px 3px #ededed; }
+  background-color: #003641;
+  padding: 20px;
+  min-height: 375px; }
   .homepagePost p {
     margin-bottom: 0; }
   .homepagePost header {
@@ -410,8 +433,7 @@ section.about .socialList li {
     padding: 20px;
     padding-right: 50px;
     font-weight: 700;
-    text-transform: uppercase;
-    background-color: white; }
+    text-transform: uppercase; }
     .homepagePost header .post-categories {
       margin: 0;
       padding: 0;
@@ -432,8 +454,7 @@ section.about .socialList li {
       width: 100%; }
   .homepagePost article {
     clear: none;
-    padding: 20px 20px 0px 20px;
-    background-color: white;
+    padding: 0 20px;
     color: #555; }
     .homepagePost article .read-more {
       font-size: 0.75em;
@@ -450,7 +471,6 @@ section.about .socialList li {
     letter-spacing: 0.05em;
     text-decoration: none;
     padding: 20px;
-    background-color: white;
     -webkit-border-bottom-left-radius: 5px;
     -webkit-border-bottom-right-radius: 5px; }
 
