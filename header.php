@@ -26,6 +26,10 @@
 
 <!-- Icon Fonts -->
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="shortcut icon" href="<?php echo get_template_directory(); ?>/typicons.min.css">
+
+
+<!-- <link rel='stylesheet' href='path/to/typicons.min.css' /> -->
 
 <?php wp_head(); ?>
 </head>
@@ -33,9 +37,12 @@
 <!-- Body -->
 <body <?php body_class(); ?>>
 
+
+	<?php if ( is_front_page() ) : ?>
+
 <header class="fullBleed headerSection">
 	<div class="container">
-
+			<!-- HOME PAGE NAVIGATION -->
 			<div class="site-branding">
 				<h1 class="site-title"><a href="#" class="scroll-link" data-id="top-link" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			</div>
@@ -53,6 +60,39 @@
 					<li><a href="#" class="scroll-link" data-id="blog-link">Blog</a></li>
 				</ul> <!-- /.NAVIGATION -->
 			</nav><!-- /.main-navigation -->
+	</div> <!-- /.container -->
+</header>	
+
+<!-- ---------------------------------------------------------------- -->
+
+<?php else: ?>
+
+<!-- PAGES NAVIGATION (OTHER THAN HOME)  -->
+<header class="fullBleed headerSection pagesNav">
+	<div class="container">
+		<div class="site-branding">
+			<a class="site-title" href="<?php echo home_url(); ?>" rel="home"><i class="typcn typcn-arrow-left"></i></a>
+		</div>
+
+		<div class="site-logo">
+			<span class="svg-pcurio"</span>
+		</div>
+
+		<!-- Main Nav -->
+		<nav class="main-navigation" role="navigation">
+		 	<!-- NAVIGATION -->
+			<ul>
+				<li><a href="#" class="scroll-link" data-id="about-link">About</a></li>
+				<li><a href="#" class="scroll-link" data-id="work-link">Work</a></li>
+				<li><a href="#" class="scroll-link" data-id="blog-link">Blog</a></li>
+			</ul> <!-- /.NAVIGATION -->
+		</nav><!-- /.main-navigation -->
+	</div> <!-- /.container -->
+</header>	
+<?php endif; ?>
+
+
+<!-- ---------------------------------------------------------------- -->
 
 			<!-- Mobile Nav -->
 			<nav class="mobile-navigation" role="navigation">

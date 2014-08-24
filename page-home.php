@@ -6,7 +6,7 @@ Template Name: Page – Home
 get_header(); ?>
 
 <!-- HERO SECTION -->
-<section class="hero">
+<section class="hero" id="top-link">
 	<div class="container">
 
 		<div class="heroWrap">
@@ -22,13 +22,13 @@ get_header(); ?>
 
 
 <!-- ABOUT SECTION -->
-<section class="fullBleed sectionTitle aboutTitle" id="about-link">
-<!-- 	<div class="container">
+<!-- <section class="fullBleed sectionTitle aboutTitle" id="about-link">
+	<div class="container">
 		<h3>about</h3>
-	</div> -->
-</section>
+	</div>
+</section> -->
 
-<section class="fullBleed about">
+<section class="fullBleed about" id="about-link">
 	<div class="container">
 
 		<p class="intro"><?php the_author_meta( 'description', '1' ); ?> </p>
@@ -107,6 +107,12 @@ get_header(); ?>
 <!-- ---------------------------------------------------------------- -->
 
 <!-- WORK SECTION -->
+<!-- <section class="fullBleed sectionTitle workTitle">
+	<div class="container">
+		<h3>work</h3>
+	</div>
+</section> -->
+
 <section class="fullBleed work" id="work-link">
 	
 	<!-- Custom Project Loop for projects here -->
@@ -161,6 +167,12 @@ get_header(); ?>
 <!-- ---------------------------------------------------------------- -->
 
 <!-- BLOG SECTION -->
+<!-- <section class="fullBleed sectionTitle blogTitle">
+	<div class="container">
+		<h3>work</h3>
+	</div>
+</section> -->
+
 <section class="fullBleed blog" id="blog-link">
 	<div class="container">
 		<?php $latest_blog_posts = new WP_Query( array( 'posts_per_page' => 6 ) ); ?>
@@ -195,7 +207,8 @@ get_header(); ?>
 		 				      echo $tag->name . ' '; 
 		 				    }
 		 				  }
-		 				?></p>
+		 				?>
+		 				</p>
 		 			</footer> 
 					
 					<a class="btn" href="<?php the_permalink(); ?>">Read More</a>
@@ -204,6 +217,7 @@ get_header(); ?>
 
 			<!-- Insert Loop Structure for Blog Posts  -->
 		<?php endwhile; endif; ?>
+		<?php wp_reset_postdata(); ?>
 	</div>
 </section>
 

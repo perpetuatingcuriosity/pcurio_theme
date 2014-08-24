@@ -11,33 +11,33 @@
 	</div><!-- #content -->
 
 	<!-- FOOTER/CONTACT LINKS -->
-	<footer>
+	<footer class="fullBleed footerSection">
 		<div class="container">
-
-		<!--Social Icons-->	
-			<div class = "socialIcons">
-				<a href="http://facebook.com/perpetuatingcuriosity">
-			    <i class="fa fa-facebook-square"></i></a>
-
-			    <a href="http://twitter.com/alexispcurio">
-			    <i class="fa fa-twitter-square"></i></a>
-
-			    <a href="https://www.linkedin.com/pub/alexandra-bain/32/703/662">
-			    <i class="fa fa-linkedin-square"></i></a>
-
-				<a href="http://vimeo.com/perpetuatingcuriosity">
-			    <i class="fa fa-vimeo-square"></i></a>
-
-			    <a href="http://soundcloud.com/perpetuatingcuriosity">
-			    <i class="fa fa-soundcloud"></i></a>
-		    </div>
 
 		<!-- Other Links -->	
 			<div class="otherLinks">
 				<h3><a href="mailto: perpetuatingcuriosity@gmail.com"> perpetuatingcuriosity@gmail.com</a></h3>
 			</div>
 
-		</div>
+		<!--Social Icons-->	
+			<div class = "socialIcons">
+			    <a href="http://twitter.com/alexispcurio">
+			    	<i class="fa fa-twitter-square"></i></a>
+
+			    <a href="https://www.linkedin.com/pub/alexandra-bain/32/703/662">
+			    	<i class="fa fa-linkedin-square"></i></a>
+
+			   	<a href="http://facebook.com/perpetuatingcuriosity">
+			    	<i class="fa fa-facebook-square"></i></a>
+
+					<a href="http://vimeo.com/perpetuatingcuriosity">
+			    	<i class="fa fa-vimeo-square"></i></a>
+
+			    <a href="http://soundcloud.com/perpetuatingcuriosity">
+			    	<i class="fa fa-soundcloud"></i></a>
+		    </div>
+
+		</div> <!-- /.container -->
 	</footer> <!-- /.FOOTER-->
 
 	<?php wp_footer(); ?>
