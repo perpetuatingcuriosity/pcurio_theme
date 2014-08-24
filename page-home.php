@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php 
+/*
+Template Name: Page – Home
+*/
+
+get_header(); ?>
 
 <!-- HERO SECTION -->
 <section class="hero">
@@ -177,7 +182,7 @@
 		 			</article>
 
 		 			<footer>
-		 			<?php the_date(); ?>
+		 				<a class="btn" href="<?php the_permalink(); ?>">Read More</a>
 		 			</footer>
 
 				</section> <!-- /.homepagePost -->
