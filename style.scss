@@ -372,9 +372,9 @@ section.work {
 	z-index: 0;
 	@include column(4);
 	margin-bottom: 15px;
-	padding: 4%;
+	padding: 3%;
 	background-color: $dirtyYellow;
-	min-height: 300px;
+	min-height: 325px;
 	p {
 		margin-bottom: 0;
 	}
@@ -387,6 +387,7 @@ section.work {
 			padding: 0;
 			text-transform: uppercase;
 			@include fontify(0.6em,500);
+			color: darken($dirtyYellow,20);
 			li {
 				list-style-type: none;
 				margin: 0;
@@ -410,6 +411,12 @@ section.work {
 			@include fontify(0.75em,700);
 			text-transform: uppercase;	
 		}
+	}
+	footer {
+		padding-bottom:20px;
+		@include fontify(0.6em,700);
+		color: darken($dirtyYellow,20);
+		text-transform: uppercase;
 	}
 	.btn {
 		position: absolute;

@@ -1,13 +1,48 @@
-<!-- 				    <?php while(the_repeater_field('skill_section_1')): ?>
+		<!-- put custom loop for about-skills here -->
+		<!-- There are 4 sections to this loop + one with social links -->
+		<?php
 
-						<?php if(has_sub_field('url')): ?>
-							<?php while(has_sub_field('url')): ?>
-				    	<li><a href="<?php the_sub_field('url') ?>"><?php the_sub_field('single_skill_1') ?></a></li>
-						
-						<?php else:  ?>
+		$skillsQuery = new WP_Query( 
+			array( 
+				'post_type' => 'skills', 
+				// 'project_type' => $projectTerms, 
+				// 'post__not_in' => array( $post->ID )  
+				) 
+		); ?>
+
+		<?php if ( $skillsQuery->have_posts() ) : ?>
+
+			<?php while ($skillsQuery->have_posts()) : $skillsQuery->the_post(); ?>
+
+				<h3><?php the_title(); ?></h3>
+				
+				<ul>	
+					<?php while(the_repeater_field('skill_section_1')): ?>
+						<?php if(the_sub_field('url') !== ''): ?>
+				    		<li><a href="<?php the_sub_field('url') ?>"><?php the_sub_field('single_skill_1') ?></a></li>
+				    	<?php else:  ?>
 							<li><?php the_sub_field('single_skill_1') ?></li>
-					<?php endwhile; ?>
+						<?php endif; ?>
+					<?php endwhile; ?> 									
+				</ul>
 
-					<?php endwhile; ?> -->
+				<ul>
+				    <?php while(the_repeater_field('skill_section_2')): ?>
+				        <li><?php the_sub_field('single_skill_2') ?></li>
+				    <?php endwhile; ?>
+				</ul>
+				<ul>
+				    <?php while(the_repeater_field('skill_section_3')): ?>
+				        <li><?php the_sub_field('single_skill_3') ?></li>
+				    <?php endwhile; ?>
+				</ul>
+				
+		<?php endwhile; ?>
+		
+		<?php wp_reset_postdata(); ?>
+		
+<!-- 	<?php else:  ?>
+		[stuff that happens if there aren't any posts] -->
+	<?php endif; ?>
 
 

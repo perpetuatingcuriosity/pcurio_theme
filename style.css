@@ -429,9 +429,9 @@ section.about {
   width: 31.25%;
   margin: 0 1.04167%;
   margin-bottom: 15px;
-  padding: 4%;
+  padding: 3%;
   background-color: #e0c341;
-  min-height: 300px; }
+  min-height: 325px; }
   .homepagePost p {
     margin-bottom: 0; }
   .homepagePost header {
@@ -449,7 +449,8 @@ section.about {
       font-weight: 500;
       line-height: 1.6em;
       letter-spacing: 0.05em;
-      text-decoration: none; }
+      text-decoration: none;
+      color: #a1881a; }
       .homepagePost header .post-categories li {
         list-style-type: none;
         margin: 0; }
@@ -463,6 +464,15 @@ section.about {
       letter-spacing: 0.05em;
       text-decoration: none;
       text-transform: uppercase; }
+  .homepagePost footer {
+    padding-bottom: 20px;
+    font-size: 0.6em;
+    font-weight: 700;
+    line-height: 1.6em;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    color: #a1881a;
+    text-transform: uppercase; }
   .homepagePost .btn {
     position: absolute;
     bottom: 0;

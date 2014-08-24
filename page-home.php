@@ -169,7 +169,12 @@ get_header(); ?>
 
 				<section class="homepagePost">
 					<header>
-						<?php the_category(); ?> 
+						<p class="post-categories">	
+						<?php
+						$category = get_the_category(); 
+						echo $category[0]->cat_name;
+						?>
+		 				</p>
 		 				<?php the_title(); ?>
 		 			</header>
 
@@ -182,8 +187,18 @@ get_header(); ?>
 		 			</article>
 
 		 			<footer>
-		 				<a class="btn" href="<?php the_permalink(); ?>">Read More</a>
-		 			</footer>
+		 				<p>
+		 				<?php
+		 				  $posttags = get_the_tags();
+		 				  if ($posttags) {
+		 				    foreach($posttags as $tag) {
+		 				      echo $tag->name . ' '; 
+		 				    }
+		 				  }
+		 				?></p>
+		 			</footer> 
+					
+					<a class="btn" href="<?php the_permalink(); ?>">Read More</a>
 
 				</section> <!-- /.homepagePost -->
 
