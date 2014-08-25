@@ -10,6 +10,7 @@
 //COLOURS
 //----------------------------------------------------------------
 
+//PCURIO BASE
 $red: #BE3232;
 $deepRed: #822222;
 $lightGray: #EDEDED;
@@ -17,6 +18,7 @@ $blogGray: #F4F3F3;
 $heroGray: #E5E5E5;
 $darkGray: #444;
 
+//ALBUM COVER
 $blue: #00AEDA;
 $blueAlt: #31BFFF;
 $darkBlue: #003641;
@@ -24,9 +26,16 @@ $cream: #FFF6DB;
 $tan: #AA9079;
 $pink: #EA6B6B;
 
+//YELLOW
 $yellow: #FFCC00;
 $dirtyYellow: #E0C341;
 $dirtyYellowLite: #E9CE4D;
+
+//GREEN
+$mutedGreen: #58743D;
+$mutedGreenLite: #92A762;
+$darkGreen: #264C2F;
+
 
 //TYPICONS
 @font-face {
@@ -58,6 +67,34 @@ $dirtyYellowLite: #E9CE4D;
 	float: $fl;
 }
 
+@mixin linkage ($colour,$hover,$td:none) {
+		color: $colour;
+		text-decoration: $td;
+		&:visited {
+			color: $colour;
+		}
+		&:hover {
+			color: $hover;
+		}
+}
+
+@mixin theHardestButtonToButton ($bgInit,$textInit,$bgHover,$textHover:$textInit) {
+	@include fontify(0.6em,700,inherit,0.15em);
+	text-transform: uppercase;
+	padding: 10px 15px;
+	background-color: $bgInit;
+	transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+	color: $textInit;
+	&:visited {
+		color: $textInit;
+	}
+	&:hover {
+		color: $textHover;
+		background-color: $blue;
+	}
+}
+
 
 //----------------------------------------------------------------
 //----------------------------------------------------------------
@@ -68,8 +105,8 @@ $dirtyYellowLite: #E9CE4D;
 body {
 	@include fontify(16px,400);
 	font-family: 'Raleway', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
+	// -webkit-font-smoothing: antialiased;
+	// text-rendering: optimizeLegibility;
 }
 
 // font fanciness for headers and whatnot
@@ -87,32 +124,26 @@ h1,h2,h3,h4,h5,h6 {
 		max-width: 1400px;
 		margin: 0 auto;
 		width: 100%;
-		padding: 75px 4% 75px 4%;
+		padding: 75px 5% 75px 5%;
 		overflow:hidden;
 	}
 }
 
 .fullBleed.sectionTitle {
 	text-align: center;
-	background-color: $darkBlue;
+	background-color: $dirtyYellow;
 	color: white;
 	.container {
-		padding: 25px;
+		padding: 22px 7%;
 		h3 {
 			margin: 0;
+			color: $darkGray;
 		}
 	}
 }
 
 a {
-	color: $red;
-	text-decoration: none;
-	&:visited {
-		color: $red;
-	}
-	&:hover {
-		color: $deepRed;
-	}
+	@include linkage ($red,$deepRed);
 }
 
 h1 {
@@ -146,10 +177,6 @@ h5 {
 	margin:0;
 }
 
-// p {
-// 	font-family: 'Noto Sans',sans-serif;
-// }
-
 ul {
 	padding: 0;
 	li {
@@ -159,21 +186,7 @@ ul {
 }
 
 .btn {
-	@include fontify(0.6em,700,inherit,0.15em);
-	text-transform: uppercase;
-	padding: 10px 15px;
-	// border-radius: 3px;
-	background-color: $darkBlue;
-	transition: all 0.2s ease;
-	-webkit-transition: all 0.2s ease;
-	color: white;
-	&:visited {
-		color: white;
-	}
-	&:hover {
-		color: white;
-		background-color: $blue;
-	}
+	@include theHardestButtonToButton ($darkBlue,white,$blue);
 }
 
 
@@ -193,19 +206,12 @@ header.fullBleed.headerSection {
 	}
 	text-transform: uppercase;
 	a {
-		color: black;
-		text-decoration: none;
-		&:visited {
-			color: black;
-		}
-		&:hover {
-			color: $darkGray;
-		}
-	}	
+		@include linkage(black,$darkGray);
+	}
 }
 
 .site-title {
-	padding: 10px;
+	padding: 10px 10px 10px 5px;
 }
 
 .site-branding {
@@ -216,13 +222,14 @@ header.fullBleed.headerSection {
 	@include column(4);
 	text-align: center;
 	padding-top: 5px;
-	svg{
+	.svg-pcurio {
 		width: 15px;
 		height: 100%;
 		display: none;
 	}
 }
 
+//HOME NAV
 nav.main-navigation {
 	@include column(4);
 	ul {
@@ -233,7 +240,10 @@ nav.main-navigation {
 			float: left;
 			display: inline;
 			a {
-				padding: 15px;
+				padding-left: 30px;
+				&:last-child {
+					padding-right: 5px;
+				}
 			}
 		}
 	}
@@ -241,19 +251,25 @@ nav.main-navigation {
 
 //PAGES NAV
 .fullBleed.headerSection.pagesNav {
-	.site-title {
-		font-weight: 400;
-		.typcn {
-			width: 10px;
+	.site-branding {
+		a {
+			@include shiftOva;
+			padding-top: 10px;
+			padding-left: 5%;
+		}
+		svg {
+			width: 50px;
 			height: auto;
+			@include shiftOva;
+		}
+		.site-title {
+			float: left;
+			display: inline;
+			padding: 0;
 		}
 	}
-	.site-logo {
-		svg{
-			width: 15px;
-			height: 100%;
-			display: inline;
-		}
+	nav.main-navigation {
+		// padding-right: 5%;
 	}
 }
 
@@ -292,10 +308,12 @@ section.hero {
 //----------------------------------------------------------------
 
 section.about {
+	.container {
+		padding: 75px 10%;
+	}
 	background-color: $lightGray;
 	p.intro {
 		@include fontify(1.25em,300,1.8em);
-		padding-right: 50px;
 		margin-top: 0;
 		margin-bottom: 50px;
 	}
@@ -343,28 +361,38 @@ section.about {
 //----------------------------------------------------------------
 
 section.work {
-	
+	.projectPost:nth-child(3n+1) {
+		background-color: $mutedGreenLite;
+	}
+
+	.projectPost:nth-child(3n+2) {
+		background-color: lighten($tan,10);
+	}
+
+	.projectPost:nth-child(3n+3) {
+		background-color: darken($cream,5);
+	}
 }
 
 .projectPost {
 	@include shiftOva;
 	width: 100%;
-	background-color: $pink;
 	.container {
-		@include shiftOva;
-		width: 100%;
+		// @include shiftOva;
+		// width: 100%;
 	}
 	//Featured Image
 	figure.projectPreview {
-		@include column(6);
+		@include column(5);
 		img {
+			padding-top: 5px;
 			width: 100%;
 			height: auto;
 		}
 	}
 	//Project Description
 	article.projectDescription {
-		@include column(6);
+		@include column(7);
 		p {
 			@include fontify(1em,400);
 			font-family: 'Noto Sans';
@@ -374,14 +402,16 @@ section.work {
 }
 
 
-
-
 //----------------------------------------------------------------
 //BLOG SECTION
 //----------------------------------------------------------------
  
+
 .fullBleed.blog {
 	background-color: $dirtyYellowLite;
+	.container.blogContainer {
+		padding: 5% 4% 75px 4%;
+	}
 }
 
 //Single Post
@@ -406,26 +436,15 @@ section.work {
 			text-transform: uppercase;
 			@include fontify(0.6em,500);
 			color: $deepRed;
-			// color: darken($dirtyYellow,20);
 			li {
 				list-style-type: none;
 				margin: 0;
 			}
 		}
 	}
-	// figure {
-	// 	clear: none;
-	// 	width: 100%;
-	// 	height: 200px;
-	// 	overflow: hidden;
-	// 	img {
-	// 	width: 100%;
-	// 	}
-	// }
 	article {
 		clear: none;
-		// padding: 0 20px;
-		color: $darkGray;
+		color: darken($darkGray,5);
 		.read-more {
 			@include fontify(0.75em,700);
 			text-transform: uppercase;	
@@ -477,13 +496,12 @@ section.work {
 
 .fullBleed.singlePage {
 	.container {
-		padding: 15% 10% 5% 4%;
+		padding: 15% 10% 10% 4%;
 		aside {
-			padding-right: 10%;
-			@include column(3);
-			@include fontify(0.75em,500);
+			@include column(2);
+			@include fontify(0.8em,500);
 			p.single-date {
-				margin: 1em 0;
+				margin: 0.5em 0;
 			}
 			.single-tagSection {
 				padding-bottom: 10px;
@@ -491,16 +509,28 @@ section.work {
 				p.single-tags {
 					font-weight: 700;
 					color: $darkGray;
+					margin: 0.75em 0;
 				}
 			}
 		}
 		main {
 			@include column(9);
+			@include push(0.8);
 			header {
 
 			}
 			article {
-
+				blockquote {
+				}
+				ol {
+					font-family:'Noto Sans', sans-serif;
+					strong {
+						font-family:'Noto Sans', sans-serif;
+					}
+				}
+				img {
+					max-width: 75%;
+				}
 			}
 			footer {
 
@@ -517,9 +547,16 @@ section.work {
 //----------------------------------------------------------------
 
 footer.fullBleed.footerSection {
+	background-color: $heroGray;
+	a {
+		@include linkage($red,$deepRed);
+	}
+	h3 {
+		text-transform: none;
+	}
 	.container {
 		margin: 0 auto;
-		padding: 1.5%;
+		padding: 1%;
 		.otherLinks {
 			@include column(6);
 			margin-top:5px;

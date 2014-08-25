@@ -149,6 +149,19 @@ get_header(); ?>
 						</div>
 					</article>
 
+<!-- 					<footer>
+						<p>
+						<?php
+						  $posttech = get_the_terms($post->ID,'technologies');
+						  if ($posttech) {
+						    foreach($posttech as $tech) {
+						      echo $tech->name . ' '; 
+						    }
+						  }
+						?>
+						</p>
+					</footer> -->
+
 				</div> <!-- /.container -->
 			</section> <!-- /.projectPost -->
 
@@ -167,14 +180,16 @@ get_header(); ?>
 <!-- ---------------------------------------------------------------- -->
 
 <!-- BLOG SECTION -->
-<!-- <section class="fullBleed sectionTitle blogTitle">
-	<div class="container">
-		<h3>work</h3>
-	</div>
-</section> -->
 
-<section class="fullBleed blog" id="blog-link">
+<section class="fullBleed sectionTitle blogTitle" id="blog-link">
 	<div class="container">
+	<!-- 	<h3>blog</h3> -->
+	</div>
+</section>
+
+<section class="fullBleed blog" id="bloglink">
+
+	<div class="container blogContainer">
 		<?php $latest_blog_posts = new WP_Query( array( 'posts_per_page' => 6 ) ); ?>
 
 		<?php if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post(); ?>

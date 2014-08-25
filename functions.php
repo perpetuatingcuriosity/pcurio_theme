@@ -104,4 +104,15 @@ function my_jquery_enqueue() {
    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", false, null, true);
    wp_enqueue_script('jquery');
 }
+
+
+
+//Hide admin bar
+add_filter('show_admin_bar', '__return_false');
+
+
+
+
+
+
 ?>
