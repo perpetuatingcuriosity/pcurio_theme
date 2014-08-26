@@ -26,7 +26,7 @@
 
 <!-- Icon Fonts -->
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="<?php echo bloginfo('template_directory'); ?>/typicons.min.css">
+<!-- <link rel="stylesheet" href="<?php echo bloginfo('template_directory'); ?>/typicons.min.css"> -->
 
 
 <?php wp_head(); ?>

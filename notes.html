@@ -1,3 +1,21 @@
+			<!-- JOIN TECH TERMS -->
+			<?php
+		         $posttech = get_the_terms( $post->ID, 'technologies' );         
+		         if ( $posttech && ! is_wp_error( $posttech ) ) : 
+		           $tech_links = array();
+		           foreach ( $posttech as $tech ) {
+		             $tech_links[] = $tech->name;
+		           }  
+		           $technologies_used = join( " / ", $tech_links );
+		       ?>
+			       <h3 class="taxonomy">
+			         <strong>Technologies used:</strong> <span><?php echo $technologies_used; ?></span>
+			       </h3>
+			       <?php endif; ?>
+
+
+
+
 		<!-- put custom loop for about-skills here -->
 		<!-- There are 4 sections to this loop + one with social links -->
 		<?php

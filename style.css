@@ -265,6 +265,16 @@ ul {
     color: white;
     background-color: #00aeda; }
 
+@media all and (max-width: 640px) {
+  .fullBleed {
+    width: 100%;
+    float: left; }
+    .fullBleed .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 50px 1% 50px 1%;
+      overflow: hidden; } }
 header.fullBleed.headerSection {
   font-family: 'Raleway', sans-serif;
   position: fixed;
@@ -340,6 +350,7 @@ nav.main-navigation {
   display: inline;
   padding: 0; }
 
+/*MOBILE NAVIGATION (INITIAL HIDE) */
 nav.mobile-navigation {
   display: none; }
 
@@ -443,12 +454,99 @@ section.about {
         color: white;
         background-color: #be3232; }
 
+@media all and (max-width: 640px) {
+  section.about .container {
+    padding: 75px 1%; }
+  section.about .skillSection {
+    margin-bottom: 10px;
+    padding-right: 5%; } }
 section.work .projectPost:nth-child(3n+1) {
   background-color: #92a762; }
+  section.work .projectPost:nth-child(3n+1) article.projectDescription footer {
+    padding-right: 10%; }
+    section.work .projectPost:nth-child(3n+1) article.projectDescription footer ul {
+      display: inline;
+      float: left;
+      margin: 0; }
+    section.work .projectPost:nth-child(3n+1) article.projectDescription footer li {
+      display: inline;
+      float: left;
+      font-size: 0.75em;
+      font-weight: 500;
+      line-height: 1.6em;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      display: inline-block;
+      padding: 10px 15px;
+      margin: 0 1px 7px 1px;
+      background-color: #658546;
+      transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
+      color: #92a762;
+      padding: 3px 10px; }
+      section.work .projectPost:nth-child(3n+1) article.projectDescription footer li:visited {
+        color: #92a762; }
+      section.work .projectPost:nth-child(3n+1) article.projectDescription footer li:hover {
+        color: #92a762;
+        background-color: #658546; }
 section.work .projectPost:nth-child(3n+2) {
   background-color: #beaa98; }
+  section.work .projectPost:nth-child(3n+2) article.projectDescription footer {
+    padding-right: 10%; }
+    section.work .projectPost:nth-child(3n+2) article.projectDescription footer ul {
+      display: inline;
+      float: left;
+      margin: 0; }
+    section.work .projectPost:nth-child(3n+2) article.projectDescription footer li {
+      display: inline;
+      float: left;
+      font-size: 0.75em;
+      font-weight: 500;
+      line-height: 1.6em;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      display: inline-block;
+      padding: 10px 15px;
+      margin: 0 1px 7px 1px;
+      background-color: #aa9079;
+      transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
+      color: #beaa98;
+      padding: 3px 10px; }
+      section.work .projectPost:nth-child(3n+2) article.projectDescription footer li:visited {
+        color: #beaa98; }
+      section.work .projectPost:nth-child(3n+2) article.projectDescription footer li:hover {
+        color: #beaa98;
+        background-color: #aa9079; }
 section.work .projectPost:nth-child(3n+3) {
   background-color: #fff0c2; }
+  section.work .projectPost:nth-child(3n+3) article.projectDescription footer {
+    padding-right: 10%; }
+    section.work .projectPost:nth-child(3n+3) article.projectDescription footer ul {
+      display: inline;
+      float: left;
+      margin: 0; }
+    section.work .projectPost:nth-child(3n+3) article.projectDescription footer li {
+      display: inline;
+      float: left;
+      font-size: 0.75em;
+      font-weight: 500;
+      line-height: 1.6em;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      display: inline-block;
+      padding: 10px 15px;
+      margin: 0 1px 7px 1px;
+      background-color: #fff6db;
+      transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
+      color: #aa9079;
+      padding: 3px 10px; }
+      section.work .projectPost:nth-child(3n+3) article.projectDescription footer li:visited {
+        color: #aa9079; }
+      section.work .projectPost:nth-child(3n+3) article.projectDescription footer li:hover {
+        color: #aa9079;
+        background-color: #fff6db; }
 
 .projectPost {
   display: inline;
@@ -465,37 +563,29 @@ section.work .projectPost:nth-child(3n+3) {
       padding-top: 5px;
       width: 100%;
       height: auto; }
-    .projectPost div.projectPreview .buttons {
-      margin-top: 5%;
-      display: inline;
-      float: left;
-      width: 81.25%;
-      margin: 0 1.04167%;
-      margin-left: 17.70833%; }
-      .projectPost div.projectPreview .buttons ul {
-        float: left;
-        width: 100%; }
-      .projectPost div.projectPreview .buttons li {
-        display: inline;
-        float: left;
-        margin-right: 5px; }
-        .projectPost div.projectPreview .buttons li a {
-          font-size: 0.6em;
-          font-weight: 700;
-          line-height: inherit;
-          letter-spacing: 0.15em;
-          text-decoration: none;
-          text-transform: uppercase;
-          padding: 10px 15px;
-          background-color: #006074;
-          transition: all 0.2s ease;
-          -webkit-transition: all 0.2s ease;
+    .projectPost div.projectPreview ul.buttons {
+      text-align: center;
+      width: 100%;
+      margin-top: 7%; }
+    .projectPost div.projectPreview li {
+      display: inline; }
+      .projectPost div.projectPreview li a {
+        font-size: 0.6em;
+        font-weight: 700;
+        line-height: inherit;
+        letter-spacing: 0.15em;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 10px 15px;
+        background-color: #006074;
+        transition: all 0.2s ease;
+        -webkit-transition: all 0.2s ease;
+        color: white; }
+        .projectPost div.projectPreview li a:visited {
           color: white; }
-          .projectPost div.projectPreview .buttons li a:visited {
-            color: white; }
-          .projectPost div.projectPreview .buttons li a:hover {
-            color: white;
-            background-color: #00aeda; }
+        .projectPost div.projectPreview li a:hover {
+          color: white;
+          background-color: #00aeda; }
   .projectPost article.projectDescription {
     display: inline;
     float: left;
@@ -509,32 +599,6 @@ section.work .projectPost:nth-child(3n+3) {
       letter-spacing: 0.05em;
       text-decoration: none;
       font-family: 'Noto Sans'; }
-    .projectPost article.projectDescription footer {
-      padding-right: 25%; }
-      .projectPost article.projectDescription footer ul {
-        display: inline;
-        float: left; }
-      .projectPost article.projectDescription footer li {
-        display: inline;
-        float: left;
-        font-size: 0.75em;
-        font-weight: 500;
-        line-height: 1.6em;
-        letter-spacing: 0.05em;
-        text-decoration: none;
-        display: inline-block;
-        padding: 10px 15px;
-        margin: 0 1px 7px 1px;
-        background-color: #e5e5e5;
-        transition: all 0.2s ease;
-        -webkit-transition: all 0.2s ease;
-        color: #444444;
-        padding: 5px 10px; }
-        .projectPost article.projectDescription footer li:visited {
-          color: #444444; }
-        .projectPost article.projectDescription footer li:hover {
-          color: #444444;
-          background-color: #e5e5e5; }
 
 @media all and (max-width: 768px) {
   .projectPost div.projectPreview {
@@ -662,6 +726,37 @@ section.work .projectPost:nth-child(3n+3) {
       line-height: 1.6em;
       letter-spacing: 0.05em;
       text-decoration: none; } }
+@media all and (max-width: 640px) {
+  .homepagePost {
+    display: inline;
+    float: left;
+    width: 97.91667%;
+    margin: 0 1.04167%;
+    min-height: 200px;
+    margin-bottom: 15px;
+    padding: 5%; }
+
+  header {
+    font-size: 1.25em;
+    font-weight: 700;
+    line-height: 1.6em;
+    letter-spacing: 0.05em;
+    text-decoration: none; }
+
+  .excerpt {
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.6em;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    padding-bottom: 5%; }
+
+  footer {
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1.6em;
+    letter-spacing: 0.05em;
+    text-decoration: none; } }
 .fullBleed.singlePage {
   background-color: #f4f3f3; }
   .fullBleed.singlePage p {

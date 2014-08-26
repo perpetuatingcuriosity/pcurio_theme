@@ -209,6 +209,28 @@ ul {
 	@include theHardestButtonToButton ($darkBlue,white,$blue);
 }
 
+//----------------------------------------------------------------
+//----------------------------------------------------------------
+//MEDIA QUERIES — GLOBAL
+
+//CONTAINERS
+
+@media all and (max-width: 640px) {
+	.fullBleed {
+		width: 100%;
+		float: left;
+		.container {
+			max-width: 1400px;
+			margin: 0 auto;
+			width: 100%;
+			padding: 50px 1% 50px 1%;
+			overflow:hidden;
+		}
+	}
+}
+
+
+
 
 //----------------------------------------------------------------
 //HEADER
@@ -294,9 +316,16 @@ nav.main-navigation {
 }
 
 //MOBILE NAV
+//----------------------------------------------------------------
+ /*MOBILE NAVIGATION (INITIAL HIDE) */
+//----------------------------------------------------------------
+
 nav.mobile-navigation {
 	display:none;
 }
+
+
+
 
 //----------------------------------------------------------------
 //HERO
@@ -381,30 +410,87 @@ section.about {
 }
 
 //----------------------------------------------------------------
+//MEDIA QUERIES — ABOUT SECTION
+
+@media all and (max-width: 640px) {
+	section.about {
+		.container {
+			padding: 75px 1%;
+		}
+		.skillSection {
+			margin-bottom: 10px;
+			padding-right: 5%;
+		}
+	}
+
+}
+
+
+//----------------------------------------------------------------
 //WORK SECTION
 //----------------------------------------------------------------
 
 section.work {
+	//Every Third project starting at the first
 	.projectPost:nth-child(3n+1) {
-		background-color: $mutedGreenLite;
+		background-color: $mutedGreenLite;	
+		article.projectDescription {
+			footer {
+				padding-right: 10%;
+				ul {
+					@include shiftOva;
+					margin: 0;
+				}
+				li {
+					@include shiftOva;
+					@include theLessHardButtonToButton(lighten($mutedGreen,5),$mutedGreenLite);
+					padding: 3px 10px;
+				}
+			}
+		}
 	}
-
+	//Every Third project starting at the second
 	.projectPost:nth-child(3n+2) {
 		background-color: lighten($tan,10);
+			article.projectDescription {
+				footer {
+					padding-right: 10%;
+					ul {
+						@include shiftOva;
+						margin: 0;
+					}
+					li {
+						@include shiftOva;
+						@include theLessHardButtonToButton($tan,lighten($tan,10));
+						padding: 3px 10px;
+					}
+				}
+			}
 	}
-
+	//Every Third project starting at the third
 	.projectPost:nth-child(3n+3) {
 		background-color: darken($cream,5);
+			article.projectDescription {
+				footer {
+					padding-right: 10%;
+					ul {
+						@include shiftOva;
+						margin: 0;
+					}
+					li {
+						@include shiftOva;
+						@include theLessHardButtonToButton($cream,$tan);
+						padding: 3px 10px;
+					}
+				}
+			}
 	}
 }
 
 .projectPost {
 	@include shiftOva;
 	width: 100%;
-	.container {
-		// @include shiftOva;
-		// width: 100%;
-	}
+
 	//Featured Image
 	div.projectPreview {
 		@include column(5);
@@ -416,23 +502,18 @@ section.work {
 			width: 100%;
 			height: auto;
 		}
-		//Buttons
-		.buttons {
-			margin-top: 5%;
-			@include column(10);
-			@include push(2);
-			ul {
-				float:left;
+		// Buttons
+			ul.buttons {
+				text-align:center;
 				width: 100%;
+				margin-top:7%;
 			}
 			li {
-				@include shiftOva;
-				margin-right: 5px;
+				display:inline;
 				a {
 					@include theHardestButtonToButton($darkBlue,white,$blue);
 				}
 			}
-		}
 	}
 	//Project Description
 	article.projectDescription {
@@ -442,22 +523,22 @@ section.work {
 			@include fontify(1em,400);
 			font-family: 'Noto Sans';
 		}
-		footer {
-			padding-right: 25%;
-			ul {
-				@include shiftOva;
-			}
-			li {
-				@include shiftOva;
-				@include theLessHardButtonToButton($heroGray,$darkGray);
-				padding: 5px 10px;
-			}
+		// footer {
+		// 	padding-right: 25%;
+		// 	ul {
+		// 		@include shiftOva;
+		// 	}
+		// 	li {
+		// 		@include shiftOva;
+		// 		@include theLessHardButtonToButton($heroGray,$darkGray);
+		// 		padding: 5px 10px;
+		// 	}
 			
-		}
+		// }
 	}
 }
 
-//MEDIA QUERIES – BLOG SECTION
+//MEDIA QUERIES – WORK SECTION
 //----------------------------------------------------------------
 @media all and (max-width: 768px) {
 	.projectPost {
@@ -483,26 +564,8 @@ section.work {
 		//Project Description
 		article.projectDescription {
 			@include column(12);
-			// padding-left: 3%;
-			// p {
-			// 	@include fontify(1em,400);
-			// 	font-family: 'Noto Sans';
-			// }
-			// footer {
-			// 	padding-right: 25%;
-			// 	ul {
-			// 		@include shiftOva;
-			// 	}
-			// 	li {
-			// 		@include shiftOva;
-			// 		@include theLessHardButtonToButton($heroGray,$darkGray);
-			// 		padding: 5px 10px;
-			// 	}
-				
-			// }
 		}
 	}
-
 }
 
 
@@ -600,6 +663,25 @@ section.work {
 		.excerpt {
 			@include fontify(1em,500);
 		}
+	}
+}
+
+@media all and (max-width: 640px) {
+	.homepagePost {
+		@include column(12);
+		min-height:200px;
+		margin-bottom: 15px;
+		padding: 5%;
+	}
+	header {
+		@include fontify(1.25em,700);
+	}
+	.excerpt {
+		@include fontify(1em,500);
+		padding-bottom: 5%;
+	}
+	footer {
+		@include fontify(1em,700);
 	}
 }
 

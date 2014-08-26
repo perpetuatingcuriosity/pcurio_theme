@@ -133,14 +133,14 @@ get_header(); ?>
 						<figure>
 							<?php echo get_the_post_thumbnail( $post->ID); ?> 
 						</figure>
-						<div class="buttons">
-							<ul>
+						<!-- <div class="buttons"> -->
+							<ul class="buttons">
 								<!-- <li><a href="#" class="btn projectLink">Details</a></li> -->
 								<li><a href="<?php the_field('live_link'); ?>" class="projectLink">View Live</a></li>
 								<li><a href="<?php the_field('github_link'); ?>" class="projectLink">GitHub</a></li>
 							</ul>
-						</div>
-					</div>
+						<!-- </div>
+ -->					</div>
 					
 					<article class="projectDescription">
 						<h4><?php the_title(); ?></h4>
@@ -150,6 +150,7 @@ get_header(); ?>
 							<ul>
 							<?php
 							  $posttech = get_the_terms($post->ID,'technologies');
+
 							  if ($posttech) {
 							    foreach($posttech as $tech) {
 							      echo '<li>' . $tech->name . '</li>'; 
