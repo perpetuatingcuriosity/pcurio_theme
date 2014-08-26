@@ -13,15 +13,15 @@
 //PCURIO BASE
 $red: #BE3232;
 $deepRed: #822222;
-$lightGray: #EDEDED;
-$blogGray: #F4F3F3;
 $heroGray: #E5E5E5;
+$blogGray: #F4F3F3;
+$lightGray: #EDEDED;
 $darkGray: #444;
 
 //ALBUM COVER
 $blue: #00AEDA;
 $blueAlt: #31BFFF;
-$darkBlue: #003641;
+$darkBlue: lighten(#003641,10);
 $cream: #FFF6DB;
 $tan: #AA9079;
 $pink: #EA6B6B;
@@ -78,7 +78,7 @@ $darkGreen: #264C2F;
 		}
 }
 
-@mixin theHardestButtonToButton ($bgInit,$textInit,$bgHover,$textHover:$textInit) {
+@mixin theHardestButtonToButton ($bgInit,$textInit,$bgHover:$bgInit,$textHover:$textInit) {
 	@include fontify(0.6em,700,inherit,0.15em);
 	text-transform: uppercase;
 	padding: 10px 15px;
@@ -91,7 +91,26 @@ $darkGreen: #264C2F;
 	}
 	&:hover {
 		color: $textHover;
-		background-color: $blue;
+		background-color: $bgHover;
+	}
+}
+
+@mixin theLessHardButtonToButton ($bgInit,$textInit,$bgHover:$bgInit,$textHover:$textInit) {
+	@include fontify(0.75em,500);
+	display: inline-block;
+	// text-transform: uppercase;
+	padding: 10px 15px;
+	margin: 0 1px 7px 1px;
+	background-color: $bgInit;
+	transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+	color: $textInit;
+	&:visited {
+		color: $textInit;
+	}
+	&:hover {
+		color: $textHover;
+		background-color: $bgHover;
 	}
 }
 
@@ -134,7 +153,8 @@ h1,h2,h3,h4,h5,h6 {
 	background-color: $dirtyYellow;
 	color: white;
 	.container {
-		padding: 22px 7%;
+		padding: 0;
+		height:63px;
 		h3 {
 			margin: 0;
 			color: $darkGray;
@@ -308,10 +328,10 @@ section.hero {
 //----------------------------------------------------------------
 
 section.about {
+	background-color: $lightGray;
 	.container {
 		padding: 75px 10%;
 	}
-	background-color: $lightGray;
 	p.intro {
 		@include fontify(1.25em,300,1.8em);
 		margin-top: 0;
@@ -319,38 +339,42 @@ section.about {
 	}
 
 	.skillSection {
-		margin-bottom: 30px;
-		padding-right: 200px;
+		margin-bottom: 10px;
+		padding-right: 25%;
 	}
 
 	.skillList {
 		margin-bottom: 25px;
 			li {
-			@include fontify(0.75em,500);
-			display: inline-block;
-			padding: 10px 15px;
-			margin-right: 2px;
-			border: 1px solid #999;
-			margin-bottom: 10px;
+				@include theLessHardButtonToButton ($heroGray,$darkGray);
+				&:hover {
+					transition:none;
+				}
 		}
 	}
+	.socialSection {
+		margin-top: 60px;
+	}
 	.socialList {
+		margin-bottom:0;
 		li {
-			@include fontify(0.75em,500);
+			// @include fontify(0.75em,500);
 			display: inline-block;
-			margin: 0;
-			margin-right: 2px;
-			padding: 0;
-			border: none;
+			margin-bottom: 10px;
+			// margin: 0 2px 10px 0;
+			// margin-right: 2px;
+			// padding: 0;
+			// border: none;
 				a {
-				display: inline-block;
-				padding: 10px 15px;
-				border: 1px solid #999;
-				&:hover {
-					color: $red;
-					border: 1px solid #BE3232;
-				}	
+				@include theHardestButtonToButton ($heroGray,$darkGray,$red,white);
 			}
+		}
+	}
+
+	.otherLinks {
+		margin-top:10px;
+		a {
+			@include theHardestButtonToButton ($heroGray,$darkGray,$red,white);
 		}
 	}
 
@@ -382,24 +406,107 @@ section.work {
 		// width: 100%;
 	}
 	//Featured Image
-	figure.projectPreview {
+	div.projectPreview {
 		@include column(5);
+		figure {
+			width: 100%;
+		}
 		img {
 			padding-top: 5px;
 			width: 100%;
 			height: auto;
 		}
+		//Buttons
+		.buttons {
+			margin-top: 5%;
+			@include column(10);
+			@include push(2);
+			ul {
+				float:left;
+				width: 100%;
+			}
+			li {
+				@include shiftOva;
+				margin-right: 5px;
+				a {
+					@include theHardestButtonToButton($darkBlue,white,$blue);
+				}
+			}
+		}
 	}
 	//Project Description
 	article.projectDescription {
 		@include column(7);
+		padding-left: 3%;
 		p {
 			@include fontify(1em,400);
 			font-family: 'Noto Sans';
 		}
-	}	
+		footer {
+			padding-right: 25%;
+			ul {
+				@include shiftOva;
+			}
+			li {
+				@include shiftOva;
+				@include theLessHardButtonToButton($heroGray,$darkGray);
+				padding: 5px 10px;
+			}
+			
+		}
+	}
+}
+
+//MEDIA QUERIES – BLOG SECTION
+//----------------------------------------------------------------
+@media all and (max-width: 768px) {
+	.projectPost {
+		//Featured Image
+		div.projectPreview {
+			@include column(12);
+			text-align: center;
+			figure {
+				width: 100%;
+				text-align:center;
+			}
+			img {
+				padding-top: 5px;
+				width: 86%;
+				height: auto;
+			}
+			//Buttons
+			.buttons {
+				margin:0 auto;
+				@include column(12);
+			}
+		}
+		//Project Description
+		article.projectDescription {
+			@include column(12);
+			// padding-left: 3%;
+			// p {
+			// 	@include fontify(1em,400);
+			// 	font-family: 'Noto Sans';
+			// }
+			// footer {
+			// 	padding-right: 25%;
+			// 	ul {
+			// 		@include shiftOva;
+			// 	}
+			// 	li {
+			// 		@include shiftOva;
+			// 		@include theLessHardButtonToButton($heroGray,$darkGray);
+			// 		padding: 5px 10px;
+			// 	}
+				
+			// }
+		}
+	}
 
 }
+
+
+
 
 
 //----------------------------------------------------------------
@@ -467,6 +574,36 @@ section.work {
 		}
 	}
 }
+
+//MEDIA QUERIES – BLOG SECTION
+//----------------------------------------------------------------
+@media all and (max-width: 944px) {
+	.homepagePost {
+		@include column(6);
+		margin-bottom: 15px;
+		min-height:285px;
+		header {
+			@include fontify(1.25em,700);
+		}
+		.excerpt {
+			@include fontify(1em,500);
+		}
+	}
+} 
+
+@media all and (max-width: 768px) {
+	.homepagePost {
+		min-height:300px;
+		header {
+			@include fontify(1.25em,700);
+		}
+		.excerpt {
+			@include fontify(1em,500);
+		}
+	}
+}
+
+
 
 //----------------------------------------------------------------
 //SINGLE PAGE
@@ -571,6 +708,58 @@ footer.fullBleed.footerSection {
 	}
 }
 
+
+//----------------------------------------------------------------
+//----------------------------------------------------------------
+
+//----------------------------------------------------------------
+//RESUME PAGE
+//----------------------------------------------------------------
+
+/*RESUME STARTS*/
+
+.resume {
+	padding: 50px 12%;
+	line-height: 1.8em;
+	background: #F0F0E4;
+	h3 {
+		margin-bottom:1.5em;
+	}
+	h3.title {
+		text-align: center;
+	}
+	h4 {
+		@include fontify(1em,700);
+	}
+}
+
+.resumeSection {
+	padding: 20px 0;
+	border-bottom: 1px solid #8C9492;
+
+}
+
+// h4 {
+// 	font-weight: 700;
+// }
+
+.dates {
+	float: right;
+	font-weight: 400;
+	padding-right: 10px;
+	/*text-transform: lowercase;*/
+}
+
+.resumeSection dd {
+	padding-bottom: 30px;
+	margin: 0;
+}
+
+// h3 {
+// 	font-size: 12px;
+// 	font-weight: 700;
+// 	text-transform: uppercase;
+// }
 
 
 

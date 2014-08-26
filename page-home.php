@@ -62,7 +62,7 @@ get_header(); ?>
 			<?php endif; ?>
 		</div> <!-- /. skillSection -->
 		
-		<div class="skillSection">
+		<div class="skillSection socialSection">
 			<?php
 			$socialQuery = new WP_Query( 
 				array( 
@@ -78,7 +78,7 @@ get_header(); ?>
 
 					<h3><?php the_title(); ?></h3>
 
-					<ul class="skillList socialList">
+					<ul class="socialList">
 					    <?php while(the_repeater_field('social_link')): ?>
 					        <li><a href="<?php the_sub_field('social_url') ?>"><?php the_sub_field('social_name') ?></a></li>
 					    <?php endwhile; ?>
@@ -87,18 +87,14 @@ get_header(); ?>
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 			<?php endif; ?>
+			<!-- Other Links Section -->
+			<div class="otherLinks">
+				<a href="mailto:perpetuatingcuriosity@gmail.com" class="otherLink">perpetuatingcuriosity@gmail.com</a>
+				<!-- <a href="" class="otherLink">View Resume</a> -->
+				<a href="https://dl.dropboxusercontent.com/u/4917239/AlexandraBain_Resume.pdf" class="otherLink">Resume PDF</a>
+			</div>
 		</div>
 
-
-		<!-- Mail Link -->
-		<h3>or: <a href="mailto:perpetuatingcuriosity@gmail.com">perpetuatingcuriosity@gmail.com</a></h3>
-
-		<!-- Resume Links Section -->
-		<div class="resumeLinks">
-			<h3></h3>
-			<a href="" class="btn resumeLink">View Resume</a>
-			<a href="https://dl.dropboxusercontent.com/u/4917239/AlexandraBain_Resume.pdf" class="btn resumeLink">Get PDF</a>
-		</div>
 
 	</div> <!-- /.container -->
 </section> <!-- /.about -->
@@ -133,34 +129,37 @@ get_header(); ?>
 			
 			<section class="projectPost">
 					<div class="container">	
-					<figure class="projectPreview">
-						<?php echo get_the_post_thumbnail( $post->ID); ?> 
-					</figure>
+					<div class="projectPreview">
+						<figure>
+							<?php echo get_the_post_thumbnail( $post->ID); ?> 
+						</figure>
+						<div class="buttons">
+							<ul>
+								<!-- <li><a href="#" class="btn projectLink">Details</a></li> -->
+								<li><a href="<?php the_field('live_link'); ?>" class="projectLink">View Live</a></li>
+								<li><a href="<?php the_field('github_link'); ?>" class="projectLink">GitHub</a></li>
+							</ul>
+						</div>
+					</div>
 					
 					<article class="projectDescription">
 						<h4><?php the_title(); ?></h4>
 						<h5><?php the_field('tagline'); ?></h5>
 						<p><?php the_content(); ?></p>			
-
-						<div class="buttons">
-							<a href="#" class="btn projectLink">Details</a>
-							<a href="<?php the_field('live_link'); ?>" class="btn projectLink">Live</a>
-							<a href="<?php the_field('github_link'); ?>" class="btn projectLink">GitHub</a>
-						</div>
+						<footer>
+							<ul>
+							<?php
+							  $posttech = get_the_terms($post->ID,'technologies');
+							  if ($posttech) {
+							    foreach($posttech as $tech) {
+							      echo '<li>' . $tech->name . '</li>'; 
+							    }
+							  }
+							?>
+							</ul>
+						</footer>
 					</article>
 
-<!-- 					<footer>
-						<p>
-						<?php
-						  $posttech = get_the_terms($post->ID,'technologies');
-						  if ($posttech) {
-						    foreach($posttech as $tech) {
-						      echo $tech->name . ' '; 
-						    }
-						  }
-						?>
-						</p>
-					</footer> -->
 
 				</div> <!-- /.container -->
 			</section> <!-- /.projectPost -->
@@ -204,10 +203,6 @@ get_header(); ?>
 		 				</p>
 		 				<?php the_title(); ?>
 		 			</header>
-
-		 			<!-- <figure>
-		 				get the Featured Image
-		 			</figure> -->
 
 		 		 	<article class = "excerpt">
 		 				<?php the_excerpt(); ?>
