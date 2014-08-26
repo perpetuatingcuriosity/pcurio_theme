@@ -1,11 +1,22 @@
+var $mobileNav = $('.mobileNav');
+var $menu = $('#menu');
+
 $(document).ready(function() {
+	//MOBILE NAV
+	$mobileNav.on('click',function(){
+		$menu.slideToggle('slow',function(){
+		});
+	});
+
+
+
+
 	// navigation click actions
-
-
 	$('.scroll-link').on('click', function(event){
 		event.preventDefault();
 		var sectionID = $(this).attr("data-id");
 		scrollToID('#' + sectionID, 750);
+		$menu.hide();
 	});
 	// scroll to top action
 	$('.scroll-top').on('click', function(event) {

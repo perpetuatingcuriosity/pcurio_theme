@@ -41,22 +41,31 @@
 <header class="fullBleed headerSection">
 	<div class="container">
 			<!-- HOME PAGE NAVIGATION -->
-			<div class="site-branding">
+			<div class="site-branding main-menu">
 				<h1 class="site-title"><a href="#" class="scroll-link" data-id="top-link" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			</div>
 
-			<div class="site-logo">
-				<span class="svg-pcurio"></span>
+			<div class="site-logo main-menu">
+				<!-- <span class="svg-pcurio"></span> -->
+				<div class="mobileNav">
+					<svg viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
+			    	<rect width="11" height="2"/>
+			    	<rect y="4" width="11" height="2"/>
+			    	<rect y="8" width="11" height="2"/>
+			    	</svg>
+				</div>	
 			</div>
 			
 			<!-- Main Nav -->
-			<nav class="main-navigation" role="navigation">
+			<nav class="main-navigation main-menu" role="navigation">
+			
 			 	<!-- NAVIGATION -->
-				<ul>
+				<ul id="menu">
 					<li><a href="#" class="scroll-link" data-id="about-link">About</a></li>
 					<li><a href="#" class="scroll-link" data-id="work-link">Work</a></li>
 					<li><a href="#" class="scroll-link" data-id="bloglink">Blog</a></li>
 				</ul> <!-- /.NAVIGATION -->
+
 			</nav><!-- /.main-navigation -->
 	</div> <!-- /.container -->
 </header>	
@@ -76,7 +85,7 @@
 		</div>
 
 		<div class="site-logo">
-			<span class="svg-pcurio"></span>
+			<!-- <span class="svg-pcurio"></span> -->
 		</div>
 
 		<!-- Main Nav -->
@@ -92,13 +101,15 @@
 
 
 <!-- ---------------------------------------------------------------- -->
+		
+			
 
 			<!-- Mobile Nav -->
-			<nav class="mobile-navigation" role="navigation">
+		<!-- 	<nav class="mobile-navigation" role="navigation"> -->
 					<!-- NAV -->
-					<ul class="nav clearfix">	
+					<!-- <ul class="nav clearfix">	 -->
 						<!-- Menu Dropdown Nav -->
-						<li><a href="#">   
+					<!-- 	<li><a href="#">   
 						<svg viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
 				    	<rect width="11" height="2"/>
 				    	<rect y="4" width="11" height="2"/>
@@ -107,11 +118,11 @@
 							<ul class = "sub-menu">
 								<li><a href="#" class="scroll-link" data-id="about-link">About</a></li>
 								<li><a href="#" class="scroll-link" data-id="work-link">Work</a></li>
-								<li><a href="#" class="scroll-link" data-id="blog-link">Blog</a></li>
-							</ul>
+								<li><a href="#" class="scroll-link" data-id="blog-link">Blog</a></li> -->
+<!-- 							</ul>
 						</li>
-					</ul> <!-- /.NAV -->
-			</nav>
+					</ul> --> <!-- /.NAV -->
+			<!-- </nav> -->
 
 	</div> <!-- /.container -->
 </header>	
