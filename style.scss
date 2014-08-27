@@ -516,7 +516,7 @@ section.work {
 	color: darken($superDark,5);
 	//Every Third project starting at the first
 	.projectPost:nth-child(3n+1) {
-		background-color: lighten($mauveLite,15);	
+		background-color: lighten($mauveLite,20);	
 		article.projectDescription {
 			a {
 				@include linkage($darkGray,lighten($darkGray,10));
@@ -529,7 +529,7 @@ section.work {
 				}
 				li {
 					@include shiftOva;
-					@include theLessHardButtonToButton(lighten($mauveLite,15), lighten($superDark,5));
+					@include theLessHardButtonToButton(lighten($mauveLite,20), lighten($superDark,5));
 					border: 1px solid $mauveLite;
 					padding: 3px 10px;
 				}
@@ -538,7 +538,7 @@ section.work {
 	}
 	//Every Third project starting at the second
 	.projectPost:nth-child(3n+2) {
-		background-color: lighten($orangeSalmonLite,5);
+		background-color: lighten($orangeSalmonLite,10);
 			article.projectDescription {
 				footer {
 					padding-right: 10%;
@@ -548,7 +548,7 @@ section.work {
 					}
 					li {
 						@include shiftOva;
-						@include theLessHardButtonToButton(lighten($orangeSalmonLite,5), $superDark);
+						@include theLessHardButtonToButton(lighten($orangeSalmonLite,10), $superDark);
 						border: 1px solid $orangeSalmon;
 						padding: 3px 10px;
 					}
@@ -558,7 +558,7 @@ section.work {
 
 	//Every Third project starting at the third
 	.projectPost:nth-child(3n+3) {
-		background-color: lighten($grayTeal,10);
+		background-color: lighten($grayTeal,15);
 			article.projectDescription {
 				a {
 					@include linkage($darkGray,$darkGray);
@@ -571,7 +571,7 @@ section.work {
 					}
 					li {
 						@include shiftOva;
-						@include theLessHardButtonToButton(lighten($grayTeal,10), lighten($superDark,5));
+						@include theLessHardButtonToButton(lighten($grayTeal,15), lighten($superDark,5));
 							border: 1px solid darken($grayTeal,10);
 						padding: 3px 10px;
 					}

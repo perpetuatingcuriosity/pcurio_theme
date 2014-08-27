@@ -507,7 +507,7 @@ section.about {
 section.work {
   color: #171b20; }
   section.work .projectPost:nth-child(3n+1) {
-    background-color: #bf9993; }
+    background-color: #c9a8a3; }
     section.work .projectPost:nth-child(3n+1) article.projectDescription a {
       color: #444444;
       text-decoration: none; }
@@ -532,7 +532,7 @@ section.work {
         display: inline-block;
         padding: 10px 15px;
         margin: 0 3px 7px 2px;
-        background-color: #bf9993;
+        background-color: #c9a8a3;
         transition: all 0.2s ease;
         -webkit-transition: all 0.2s ease;
         color: #2d333e;
@@ -542,9 +542,9 @@ section.work {
           color: #2d333e; }
         section.work .projectPost:nth-child(3n+1) article.projectDescription footer li:hover {
           color: #2d333e;
-          background-color: #bf9993; }
+          background-color: #c9a8a3; }
   section.work .projectPost:nth-child(3n+2) {
-    background-color: #e0866a; }
+    background-color: #e5977f; }
     section.work .projectPost:nth-child(3n+2) article.projectDescription footer {
       padding-right: 10%; }
       section.work .projectPost:nth-child(3n+2) article.projectDescription footer ul {
@@ -562,7 +562,7 @@ section.work {
         display: inline-block;
         padding: 10px 15px;
         margin: 0 3px 7px 2px;
-        background-color: #e0866a;
+        background-color: #e5977f;
         transition: all 0.2s ease;
         -webkit-transition: all 0.2s ease;
         color: #22272f;
@@ -572,9 +572,9 @@ section.work {
           color: #22272f; }
         section.work .projectPost:nth-child(3n+2) article.projectDescription footer li:hover {
           color: #22272f;
-          background-color: #e0866a; }
+          background-color: #e5977f; }
   section.work .projectPost:nth-child(3n+3) {
-    background-color: #84a0a0; }
+    background-color: #92abab; }
     section.work .projectPost:nth-child(3n+3) article.projectDescription a {
       color: #444444;
       text-decoration: none; }
@@ -599,7 +599,7 @@ section.work {
         display: inline-block;
         padding: 10px 15px;
         margin: 0 3px 7px 2px;
-        background-color: #84a0a0;
+        background-color: #92abab;
         transition: all 0.2s ease;
         -webkit-transition: all 0.2s ease;
         color: #2d333e;
@@ -609,7 +609,7 @@ section.work {
           color: #2d333e; }
         section.work .projectPost:nth-child(3n+3) article.projectDescription footer li:hover {
           color: #2d333e;
-          background-color: #84a0a0; }
+          background-color: #92abab; }
 
 .projectPost {
   display: inline;
