@@ -130,9 +130,13 @@ get_header(); ?>
 			<section class="projectPost">
 					<div class="container">	
 					<div class="projectPreview">
-						<figure>
+						<figure class="screen">
+						<div class="featuredImage">
 							<?php echo get_the_post_thumbnail( $post->ID); ?> 
+						</div>
+							<img class="imacTemplate" src="<?php echo bloginfo( 'template_directory' ); ?>/images/empty_imac.png" alt="imac screen displaying site preview">
 						</figure>
+
 						<!-- <div class="buttons"> -->
 							<ul class="buttons">
 								<!-- <li><a href="#" class="btn projectLink">Details</a></li> -->

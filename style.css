@@ -601,11 +601,23 @@ section.work .projectPost:nth-child(3n+3) {
     width: 39.58333%;
     margin: 0 1.04167%; }
     .projectPost div.projectPreview figure {
-      width: 100%; }
-    .projectPost div.projectPreview img {
-      padding-top: 5px;
       width: 100%;
-      height: auto; }
+      position: relative; }
+      .projectPost div.projectPreview figure img {
+        width: 100%;
+        height: auto; }
+      .projectPost div.projectPreview figure .imacTemplate {
+        z-index: 5;
+        padding-top: 5px;
+        width: 100%;
+        height: auto;
+        position: relative; }
+      .projectPost div.projectPreview figure .featuredImage {
+        position: absolute;
+        top: 6%;
+        left: 3%; }
+        .projectPost div.projectPreview figure .featuredImage img {
+          width: 97%; }
     .projectPost div.projectPreview ul.buttons {
       text-align: center;
       width: 100%;
@@ -654,10 +666,12 @@ section.work .projectPost:nth-child(3n+3) {
     .projectPost div.projectPreview figure {
       width: 100%;
       text-align: center; }
-    .projectPost div.projectPreview img {
-      padding-top: 5px;
-      width: 86%;
-      height: auto; }
+      .projectPost div.projectPreview figure .featuredImage {
+        position: absolute;
+        top: 5%;
+        left: 0%; }
+        .projectPost div.projectPreview figure .featuredImage img {
+          width: 94%; }
     .projectPost div.projectPreview .buttons {
       margin: 0 auto;
       display: inline;

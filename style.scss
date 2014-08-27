@@ -549,11 +549,26 @@ section.work {
 		@include column(5);
 		figure {
 			width: 100%;
-		}
-		img {
-			padding-top: 5px;
-			width: 100%;
-			height: auto;
+			position: relative;
+			img {
+				width: 100%;
+				height: auto;
+			}
+			.imacTemplate {
+				z-index:5;
+				padding-top: 5px;
+				width: 100%;
+				height: auto;
+				position: relative;
+			}
+			.featuredImage {
+				position:absolute;
+				top: 6%;
+				left: 3%;
+				img {
+					width: 97%;
+				}
+			}
 		}
 		// Buttons
 			ul.buttons {
@@ -603,12 +618,25 @@ section.work {
 			figure {
 				width: 100%;
 				text-align:center;
+				img {
+				}
+				.imacTemplate {
+					// z-index:5;
+					// padding-top: 5px;
+					// width: 100%;
+					// height: auto;
+					// position: relative;
+				}
+				.featuredImage {
+					position:absolute;
+					top: 5%;
+					left: 0%;
+					img {
+						width: 94%;
+					}
+				}
 			}
-			img {
-				padding-top: 5px;
-				width: 86%;
-				height: auto;
-			}
+
 			//Buttons
 			.buttons {
 				margin:0 auto;
@@ -621,7 +649,6 @@ section.work {
 		}
 	}
 }
-
 
 
 
