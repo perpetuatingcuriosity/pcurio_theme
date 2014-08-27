@@ -614,10 +614,11 @@ section.work .projectPost:nth-child(3n+3) {
         position: relative; }
       .projectPost div.projectPreview figure .featuredImage {
         position: absolute;
-        top: 6%;
-        left: 3%; }
+        top: 5.5%;
+        left: 3.5%;
+        background-color: #22272F; }
         .projectPost div.projectPreview figure .featuredImage img {
-          width: 97%; }
+          width: 96.5%; }
     .projectPost div.projectPreview ul.buttons {
       text-align: center;
       width: 100%;
