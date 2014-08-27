@@ -516,7 +516,7 @@ section.work {
 	color: darken($superDark,5);
 	//Every Third project starting at the first
 	.projectPost:nth-child(3n+1) {
-		background-color: lighten($mauveLite,20);	
+		background-color: lighten($mauveLite,15);	
 		article.projectDescription {
 			a {
 				@include linkage($darkGray,lighten($darkGray,10));
@@ -529,7 +529,7 @@ section.work {
 				}
 				li {
 					@include shiftOva;
-					@include theLessHardButtonToButton(lighten($mauveLite,20), lighten($superDark,10));
+					@include theLessHardButtonToButton(lighten($mauveLite,15), lighten($superDark,5));
 					border: 1px solid $mauveLite;
 					padding: 3px 10px;
 				}
@@ -537,6 +537,26 @@ section.work {
 		}
 	}
 	//Every Third project starting at the second
+	.projectPost:nth-child(3n+2) {
+		background-color: lighten($orangeSalmonLite,5);
+			article.projectDescription {
+				footer {
+					padding-right: 10%;
+					ul {
+						@include shiftOva;
+						margin: 0;
+					}
+					li {
+						@include shiftOva;
+						@include theLessHardButtonToButton(lighten($orangeSalmonLite,5), $superDark);
+						border: 1px solid $orangeSalmon;
+						padding: 3px 10px;
+					}
+				}
+			}
+	}
+
+	//Every Third project starting at the third
 	.projectPost:nth-child(3n+3) {
 		background-color: lighten($grayTeal,10);
 			article.projectDescription {
@@ -552,26 +572,7 @@ section.work {
 					li {
 						@include shiftOva;
 						@include theLessHardButtonToButton(lighten($grayTeal,10), lighten($superDark,5));
-							border: 1px solid darken($grayTeal,20);
-						padding: 3px 10px;
-					}
-				}
-			}
-	}
-	//Every Third project starting at the third
-	.projectPost:nth-child(3n+2) {
-		background-color: lighten($orangeSalmonLite,10);
-			article.projectDescription {
-				footer {
-					padding-right: 10%;
-					ul {
-						@include shiftOva;
-						margin: 0;
-					}
-					li {
-						@include shiftOva;
-						@include theLessHardButtonToButton(lighten($orangeSalmonLite,10), $darkGray);
-						border: 1px solid $orangeSalmon;
+							border: 1px solid darken($grayTeal,10);
 						padding: 3px 10px;
 					}
 				}
@@ -585,7 +586,7 @@ section.work {
 
 	//Featured Image
 	div.projectPreview {
-		@include column(6);
+		@include column(4);
 		figure {
 			width: 100%;
 			position: relative;
@@ -626,7 +627,7 @@ section.work {
 	}
 	//Project Description
 	article.projectDescription {
-		@include column(6);
+		@include column(8);
 		padding: 1% 2.5% 0 5%;
 		h3 {
 			margin-bottom: 10px;
@@ -636,7 +637,7 @@ section.work {
 			margin:0;
 		}
 		p {
-			@include fontify(0.95em,400,1.75em,0.04em);
+			@include fontify(0.95em,400,1.7em,0.03em);
 			font-family: 'Noto Sans';
 		}
 	}
