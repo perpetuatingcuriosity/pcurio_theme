@@ -440,16 +440,17 @@ section.about {
       text-decoration: none;
       display: inline-block;
       padding: 10px 15px;
-      margin: 0 1px 7px 1px;
-      background-color: #e5e5e5;
+      margin: 0 3px 7px 2px;
+      background-color: #ededed;
       transition: all 0.2s ease;
       -webkit-transition: all 0.2s ease;
-      color: #444444; }
+      color: #444444;
+      border: 1px solid #777777; }
       section.about .skillList li:visited {
         color: #444444; }
       section.about .skillList li:hover {
         color: #444444;
-        background-color: #e5e5e5; }
+        background-color: #ededed; }
       section.about .skillList li:hover {
         -webkit-transition: none;
                 transition: none; }
@@ -503,93 +504,112 @@ section.about {
   section.about .skillSection {
     margin-bottom: 10px;
     padding-right: 5%; } }
-section.work .projectPost:nth-child(3n+1) {
-  background-color: #92a762; }
-  section.work .projectPost:nth-child(3n+1) article.projectDescription footer {
-    padding-right: 10%; }
-    section.work .projectPost:nth-child(3n+1) article.projectDescription footer ul {
-      display: inline;
-      float: left;
-      margin: 0; }
-    section.work .projectPost:nth-child(3n+1) article.projectDescription footer li {
-      display: inline;
-      float: left;
-      font-size: 0.75em;
-      font-weight: 500;
-      line-height: 1.6em;
-      letter-spacing: 0.05em;
-      text-decoration: none;
-      display: inline-block;
-      padding: 10px 15px;
-      margin: 0 1px 7px 1px;
-      background-color: #658546;
-      transition: all 0.2s ease;
-      -webkit-transition: all 0.2s ease;
-      color: #92a762;
-      padding: 3px 10px; }
-      section.work .projectPost:nth-child(3n+1) article.projectDescription footer li:visited {
-        color: #92a762; }
-      section.work .projectPost:nth-child(3n+1) article.projectDescription footer li:hover {
-        color: #92a762;
-        background-color: #658546; }
-section.work .projectPost:nth-child(3n+2) {
-  background-color: #beaa98; }
-  section.work .projectPost:nth-child(3n+2) article.projectDescription footer {
-    padding-right: 10%; }
-    section.work .projectPost:nth-child(3n+2) article.projectDescription footer ul {
-      display: inline;
-      float: left;
-      margin: 0; }
-    section.work .projectPost:nth-child(3n+2) article.projectDescription footer li {
-      display: inline;
-      float: left;
-      font-size: 0.75em;
-      font-weight: 500;
-      line-height: 1.6em;
-      letter-spacing: 0.05em;
-      text-decoration: none;
-      display: inline-block;
-      padding: 10px 15px;
-      margin: 0 1px 7px 1px;
-      background-color: #aa9079;
-      transition: all 0.2s ease;
-      -webkit-transition: all 0.2s ease;
-      color: #beaa98;
-      padding: 3px 10px; }
-      section.work .projectPost:nth-child(3n+2) article.projectDescription footer li:visited {
-        color: #beaa98; }
-      section.work .projectPost:nth-child(3n+2) article.projectDescription footer li:hover {
-        color: #beaa98;
-        background-color: #aa9079; }
-section.work .projectPost:nth-child(3n+3) {
-  background-color: #fff0c2; }
-  section.work .projectPost:nth-child(3n+3) article.projectDescription footer {
-    padding-right: 10%; }
-    section.work .projectPost:nth-child(3n+3) article.projectDescription footer ul {
-      display: inline;
-      float: left;
-      margin: 0; }
-    section.work .projectPost:nth-child(3n+3) article.projectDescription footer li {
-      display: inline;
-      float: left;
-      font-size: 0.75em;
-      font-weight: 500;
-      line-height: 1.6em;
-      letter-spacing: 0.05em;
-      text-decoration: none;
-      display: inline-block;
-      padding: 10px 15px;
-      margin: 0 1px 7px 1px;
-      background-color: #fff6db;
-      transition: all 0.2s ease;
-      -webkit-transition: all 0.2s ease;
-      color: #aa9079;
-      padding: 3px 10px; }
-      section.work .projectPost:nth-child(3n+3) article.projectDescription footer li:visited {
-        color: #aa9079; }
-      section.work .projectPost:nth-child(3n+3) article.projectDescription footer li:hover {
-        color: #aa9079;
-        background-color: #fff6db; }
+section.work {
+  color: #171b20; }
+  section.work .projectPost:nth-child(3n+1) {
+    background-color: #c9a8a3; }
+    section.work .projectPost:nth-child(3n+1) article.projectDescription a {
+      color: #444444;
+      text-decoration: none; }
+      section.work .projectPost:nth-child(3n+1) article.projectDescription a:visited {
+        color: #444444; }
+      section.work .projectPost:nth-child(3n+1) article.projectDescription a:hover {
+        color: #5e5e5e; }
+    section.work .projectPost:nth-child(3n+1) article.projectDescription footer {
+      padding-right: 10%; }
+      section.work .projectPost:nth-child(3n+1) article.projectDescription footer ul {
+        display: inline;
+        float: left;
+        margin: 0; }
+      section.work .projectPost:nth-child(3n+1) article.projectDescription footer li {
+        display: inline;
+        float: left;
+        font-size: 0.75em;
+        font-weight: 500;
+        line-height: 1.6em;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px 15px;
+        margin: 0 3px 7px 2px;
+        background-color: #c9a8a3;
+        transition: all 0.2s ease;
+        -webkit-transition: all 0.2s ease;
+        color: #37404d;
+        border: 1px solid #a36b63;
+        padding: 3px 10px; }
+        section.work .projectPost:nth-child(3n+1) article.projectDescription footer li:visited {
+          color: #37404d; }
+        section.work .projectPost:nth-child(3n+1) article.projectDescription footer li:hover {
+          color: #37404d;
+          background-color: #c9a8a3; }
+  section.work .projectPost:nth-child(3n+3) {
+    background-color: #84a0a0; }
+    section.work .projectPost:nth-child(3n+3) article.projectDescription a {
+      color: #444444;
+      text-decoration: none; }
+      section.work .projectPost:nth-child(3n+3) article.projectDescription a:visited {
+        color: #444444; }
+      section.work .projectPost:nth-child(3n+3) article.projectDescription a:hover {
+        color: #444444; }
+    section.work .projectPost:nth-child(3n+3) article.projectDescription footer {
+      padding-right: 10%; }
+      section.work .projectPost:nth-child(3n+3) article.projectDescription footer ul {
+        display: inline;
+        float: left;
+        margin: 0; }
+      section.work .projectPost:nth-child(3n+3) article.projectDescription footer li {
+        display: inline;
+        float: left;
+        font-size: 0.75em;
+        font-weight: 500;
+        line-height: 1.6em;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px 15px;
+        margin: 0 3px 7px 2px;
+        background-color: #84a0a0;
+        transition: all 0.2s ease;
+        -webkit-transition: all 0.2s ease;
+        color: #2d333e;
+        border: 1px solid #3d4e4e;
+        padding: 3px 10px; }
+        section.work .projectPost:nth-child(3n+3) article.projectDescription footer li:visited {
+          color: #2d333e; }
+        section.work .projectPost:nth-child(3n+3) article.projectDescription footer li:hover {
+          color: #2d333e;
+          background-color: #84a0a0; }
+  section.work .projectPost:nth-child(3n+2) {
+    background-color: #e5977f; }
+    section.work .projectPost:nth-child(3n+2) article.projectDescription footer {
+      padding-right: 10%; }
+      section.work .projectPost:nth-child(3n+2) article.projectDescription footer ul {
+        display: inline;
+        float: left;
+        margin: 0; }
+      section.work .projectPost:nth-child(3n+2) article.projectDescription footer li {
+        display: inline;
+        float: left;
+        font-size: 0.75em;
+        font-weight: 500;
+        line-height: 1.6em;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px 15px;
+        margin: 0 3px 7px 2px;
+        background-color: #e5977f;
+        transition: all 0.2s ease;
+        -webkit-transition: all 0.2s ease;
+        color: #444444;
+        border: 1px solid #c86040;
+        padding: 3px 10px; }
+        section.work .projectPost:nth-child(3n+2) article.projectDescription footer li:visited {
+          color: #444444; }
+        section.work .projectPost:nth-child(3n+2) article.projectDescription footer li:hover {
+          color: #444444;
+          background-color: #e5977f; }
 
 .projectPost {
   display: inline;
@@ -598,7 +618,7 @@ section.work .projectPost:nth-child(3n+3) {
   .projectPost div.projectPreview {
     display: inline;
     float: left;
-    width: 39.58333%;
+    width: 47.91667%;
     margin: 0 1.04167%; }
     .projectPost div.projectPreview figure {
       width: 100%;
@@ -616,7 +636,7 @@ section.work .projectPost:nth-child(3n+3) {
         position: absolute;
         top: 5.5%;
         left: 3.5%;
-        background-color: #22272F; }
+        background-color: #22272f; }
         .projectPost div.projectPreview figure .featuredImage img {
           width: 96.5%; }
     .projectPost div.projectPreview ul.buttons {
@@ -646,14 +666,23 @@ section.work .projectPost:nth-child(3n+3) {
   .projectPost article.projectDescription {
     display: inline;
     float: left;
-    width: 56.25%;
+    width: 47.91667%;
     margin: 0 1.04167%;
-    padding-left: 3%; }
-    .projectPost article.projectDescription p {
+    padding: 1% 2.5% 0 5%; }
+    .projectPost article.projectDescription h3 {
+      margin-bottom: 10px; }
+    .projectPost article.projectDescription h4 {
       font-size: 1em;
-      font-weight: 400;
+      font-weight: 700;
       line-height: 1.6em;
       letter-spacing: 0.05em;
+      text-decoration: none;
+      margin: 0; }
+    .projectPost article.projectDescription p {
+      font-size: 0.95em;
+      font-weight: 400;
+      line-height: 1.75em;
+      letter-spacing: 0.04em;
       text-decoration: none;
       font-family: 'Noto Sans'; }
 
@@ -683,7 +712,9 @@ section.work .projectPost:nth-child(3n+3) {
     display: inline;
     float: left;
     width: 97.91667%;
-    margin: 0 1.04167%; } }
+    margin: 0 1.04167%;
+    margin-top: 12%;
+    padding: 1%; } }
 .fullBleed.blog {
   background-color: #e9ce4d; }
   .fullBleed.blog .container.blogContainer {

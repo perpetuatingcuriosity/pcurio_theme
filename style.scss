@@ -18,6 +18,9 @@ $blogGray: #F4F3F3;
 $lightGray: #EDEDED;
 $darkGray: #444;
 
+//Work Base
+$superDark: #22272F;
+
 //ALBUM COVER
 $blue: #00AEDA;
 $blueAlt: #31BFFF;
@@ -35,6 +38,31 @@ $dirtyYellowLite: #E9CE4D;
 $mutedGreen: #58743D;
 $mutedGreenLite: #92A762;
 $darkGreen: #264C2F;
+
+
+//Mauve
+$mauve: #835D5C;
+$mauveLite: #A36B63;
+
+//GREY BLUE
+$grayBlue: #9EB2BE;
+$grayBlueLite: #C1CFD8;
+
+//SALMON
+$orangeSalmon: #C86040;
+$orangeSalmonLite: #DC7555;
+
+//Grey teals
+$grayTeal: #698888;
+$grayCream: #EBEEDD;
+
+//Aqua
+$aqua: #00A8A7;
+$aquaLite: #2AC4C0;
+
+//PinkLite
+$pinkLite: #FC9991;
+$pinkExtraLite: #FFE7E6;
 
 
 //TYPICONS
@@ -100,7 +128,7 @@ $darkGreen: #264C2F;
 	display: inline-block;
 	// text-transform: uppercase;
 	padding: 10px 15px;
-	margin: 0 1px 7px 1px;
+	margin: 0 3px 7px 2px;
 	background-color: $bgInit;
 	transition: all 0.2s ease;
 	-webkit-transition: all 0.2s ease;
@@ -428,7 +456,8 @@ section.about {
 	.skillList {
 		margin-bottom: 25px;
 			li {
-				@include theLessHardButtonToButton ($heroGray,$darkGray);
+				@include theLessHardButtonToButton ($lightGray,$darkGray);
+				border: 1px solid lighten($darkGray,20);
 				&:hover {
 					transition:none;
 				}
@@ -484,10 +513,14 @@ section.about {
 //----------------------------------------------------------------
 
 section.work {
+	color: darken($superDark,5);
 	//Every Third project starting at the first
 	.projectPost:nth-child(3n+1) {
-		background-color: $mutedGreenLite;	
+		background-color: lighten($mauveLite,20);	
 		article.projectDescription {
+			a {
+				@include linkage($darkGray,lighten($darkGray,10));
+			}
 			footer {
 				padding-right: 10%;
 				ul {
@@ -496,16 +529,20 @@ section.work {
 				}
 				li {
 					@include shiftOva;
-					@include theLessHardButtonToButton(lighten($mutedGreen,5),$mutedGreenLite);
+					@include theLessHardButtonToButton(lighten($mauveLite,20), lighten($superDark,10));
+					border: 1px solid $mauveLite;
 					padding: 3px 10px;
 				}
 			}
 		}
 	}
 	//Every Third project starting at the second
-	.projectPost:nth-child(3n+2) {
-		background-color: lighten($tan,10);
+	.projectPost:nth-child(3n+3) {
+		background-color: lighten($grayTeal,10);
 			article.projectDescription {
+				a {
+					@include linkage($darkGray,$darkGray);
+				}
 				footer {
 					padding-right: 10%;
 					ul {
@@ -514,15 +551,16 @@ section.work {
 					}
 					li {
 						@include shiftOva;
-						@include theLessHardButtonToButton($tan,lighten($tan,10));
+						@include theLessHardButtonToButton(lighten($grayTeal,10), lighten($superDark,5));
+							border: 1px solid darken($grayTeal,20);
 						padding: 3px 10px;
 					}
 				}
 			}
 	}
 	//Every Third project starting at the third
-	.projectPost:nth-child(3n+3) {
-		background-color: darken($cream,5);
+	.projectPost:nth-child(3n+2) {
+		background-color: lighten($orangeSalmonLite,10);
 			article.projectDescription {
 				footer {
 					padding-right: 10%;
@@ -532,7 +570,8 @@ section.work {
 					}
 					li {
 						@include shiftOva;
-						@include theLessHardButtonToButton($cream,$tan);
+						@include theLessHardButtonToButton(lighten($orangeSalmonLite,10), $darkGray);
+						border: 1px solid $orangeSalmon;
 						padding: 3px 10px;
 					}
 				}
@@ -546,7 +585,7 @@ section.work {
 
 	//Featured Image
 	div.projectPreview {
-		@include column(5);
+		@include column(6);
 		figure {
 			width: 100%;
 			position: relative;
@@ -565,7 +604,7 @@ section.work {
 				position:absolute;
 				top: 5.5%;
 				left: 3.5%;
-				background-color: #22272F;
+				background-color: $superDark;
 				img {
 					width: 96.5%;
 				}
@@ -587,24 +626,19 @@ section.work {
 	}
 	//Project Description
 	article.projectDescription {
-		@include column(7);
-		padding-left: 3%;
+		@include column(6);
+		padding: 1% 2.5% 0 5%;
+		h3 {
+			margin-bottom: 10px;
+		}
+		h4 {
+			@include fontify(1em,700);
+			margin:0;
+		}
 		p {
-			@include fontify(1em,400);
+			@include fontify(0.95em,400,1.75em,0.04em);
 			font-family: 'Noto Sans';
 		}
-		// footer {
-		// 	padding-right: 25%;
-		// 	ul {
-		// 		@include shiftOva;
-		// 	}
-		// 	li {
-		// 		@include shiftOva;
-		// 		@include theLessHardButtonToButton($heroGray,$darkGray);
-		// 		padding: 5px 10px;
-		// 	}
-			
-		// }
 	}
 }
 
@@ -647,6 +681,8 @@ section.work {
 		//Project Description
 		article.projectDescription {
 			@include column(12);
+			margin-top:12%;
+			padding: 1%;
 		}
 	}
 }

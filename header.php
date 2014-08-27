@@ -10,7 +10,7 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php bloginfo('name'); ?></title>
+<title><?php bloginfo('name'); ?> | Alex Bain’s portfolio</title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
@@ -26,7 +26,6 @@
 
 <!-- Icon Fonts -->
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<!-- <link rel="stylesheet" href="<?php echo bloginfo('template_directory'); ?>/typicons.min.css"> -->
 
 
 <?php wp_head(); ?>
@@ -101,28 +100,6 @@
 
 
 <!-- ---------------------------------------------------------------- -->
-		
-			
-
-			<!-- Mobile Nav -->
-		<!-- 	<nav class="mobile-navigation" role="navigation"> -->
-					<!-- NAV -->
-					<!-- <ul class="nav clearfix">	 -->
-						<!-- Menu Dropdown Nav -->
-					<!-- 	<li><a href="#">   
-						<svg viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
-				    	<rect width="11" height="2"/>
-				    	<rect y="4" width="11" height="2"/>
-				    	<rect y="8" width="11" height="2"/>
-				    	</svg></a>
-							<ul class = "sub-menu">
-								<li><a href="#" class="scroll-link" data-id="about-link">About</a></li>
-								<li><a href="#" class="scroll-link" data-id="work-link">Work</a></li>
-								<li><a href="#" class="scroll-link" data-id="blog-link">Blog</a></li> -->
-<!-- 							</ul>
-						</li>
-					</ul> --> <!-- /.NAV -->
-			<!-- </nav> -->
 
 	</div> <!-- /.container -->
 </header>	

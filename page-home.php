@@ -33,10 +33,6 @@ get_header(); ?>
 
 		<p class="intro"><?php the_author_meta( 'description', '1' ); ?> </p>
 		
-		<!-- <p class="intro">I’m most passionate about using my skills design and development to create solutions to problems that aren’t limited to print or digital.
-		<span>(Not-so-secret ambition: design for large-scale human systems.)</span>
-		My superpower is my ability to discover, recall and apply information.</p> -->
-		
 		<div class="skillSection">
 			<?php
 			$skillsQuery = new WP_Query( 
@@ -147,8 +143,8 @@ get_header(); ?>
  -->					</div>
 					
 					<article class="projectDescription">
-						<h4><?php the_title(); ?></h4>
-						<h5><?php the_field('tagline'); ?></h5>
+						<h3><?php the_title(); ?></h3>
+						<h4><?php the_field('tagline'); ?></h4>
 						<p><?php the_content(); ?></p>			
 						<footer>
 							<ul>
