@@ -21,6 +21,8 @@
 
 		<!--Social Icons-->	
 			<div class = "socialIcons">
+				<a href="mailto: perpetuatingcuriosity@gmail.com" class="mobileMail"><i class="fa fa-envelope"></i></a>
+
 			    <a href="http://twitter.com/alexispcurio" target="_blank">
 			    	<i class="fa fa-twitter-square"></i></a>
 

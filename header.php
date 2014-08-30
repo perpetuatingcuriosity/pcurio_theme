@@ -43,9 +43,9 @@
 			<div class="site-branding main-menu">
 				<h1 class="site-title"><a href="#" class="scroll-link" data-id="top-link" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			</div>
-
-			<div class="site-logo main-menu">
-				<!-- <span class="svg-pcurio"></span> -->
+			
+			<!-- MobileNav Icon -->
+			<div class="site-mobileNav main-menu">
 				<div class="mobileNav">
 					<svg viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
 			    	<rect width="11" height="2"/>
@@ -56,10 +56,10 @@
 			</div>
 			
 			<!-- Main Nav -->
-			<nav class="main-navigation main-menu" role="navigation">
-			
+			<nav class="main-navigation main-menu" role="navigation" id="menu">
+				
 			 	<!-- NAVIGATION -->
-				<ul id="menu">
+				<ul id="#menuList">
 					<li><a href="#" class="scroll-link" data-id="about-link">About</a></li>
 					<li><a href="#" class="scroll-link" data-id="work-link">Work</a></li>
 					<li><a href="#" class="scroll-link" data-id="bloglink">Blog</a></li>
@@ -83,8 +83,15 @@
 			</a>
 		</div>
 
-		<div class="site-logo">
-			<!-- <span class="svg-pcurio"></span> -->
+		<!-- MobileNav Icon -->
+		<div class="site-mobileNav main-menu">
+			<div class="mobileNav">
+				<svg viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
+		    	<rect width="11" height="2"/>
+		    	<rect y="4" width="11" height="2"/>
+		    	<rect y="8" width="11" height="2"/>
+		    	</svg>
+			</div>	
 		</div>
 
 		<!-- Main Nav -->
@@ -94,6 +101,7 @@
 				<li><a href="#" class="scroll-link" data-id="blog-link">More Posts</a></li>
 			</ul> <!-- /.NAVIGATION -->
 		</nav><!-- /.main-navigation -->
+		
 	</div> <!-- /.container -->
 </header>	
 <?php endif; ?>
