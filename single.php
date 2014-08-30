@@ -2,16 +2,16 @@
 
 <section class="fullBleed singlePage">
 	<div class="container">
-		
+		<!-- Get Date of Post and Tags -->
 		<?php while ( have_posts() ) : the_post(); ?>
 		<aside>
 				<p class="single-date"><?php the_date(); ?></p>
 				<div class="single-tagSection">
-				<p class="single-tags"><?php
+				<ul class="single-tags"><?php
 				  $posttags = get_the_tags();
 				  if ($posttags) {
 				    foreach($posttags as $tag) {
-				      echo $tag->name . ' '; 
+				      echo '<li>' . $tag->name . '</li>'; 
 				    }
 				  }
 				?>
@@ -19,20 +19,34 @@
 				</div>
 		</aside>
 		
+		<!-- Main Article -->
 		<main>
-
 			<header>
 			<h2><?php the_title(); ?></h2>
+
+			<div class="mobileSubHead">
+				<p class="single-date"><?php the_date(); ?></p>
+				<div class="single-tagSection">
+				<ul class="single-tags"><?php
+				  $posttags = get_the_tags();
+				  if ($posttags) {
+				    foreach($posttags as $tag) {
+				      echo '<li>' . $tag->name . '</li>'; 
+				    }
+				  }
+				?>
+				</ul>
+			</div>
+
 			</header>
+
 
 			<article>
 				<?php the_content(); ?>
 			</article>
 
 			<footer class="more-posts">
-
 			</footer>
-
 		</main>
 		<?php endwhile; // end of the loop. ?>
 	<?php wp_reset_postdata(); ?>
