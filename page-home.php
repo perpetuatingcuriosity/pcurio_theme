@@ -99,11 +99,11 @@ get_header(); ?>
 <!-- ---------------------------------------------------------------- -->
 
 <!-- WORK SECTION -->
-<!-- <section class="fullBleed sectionTitle workTitle">
+<section class="fullBleed sectionTitle workTitle">
 	<div class="container">
-		<h3>work</h3>
+<!-- 		<h3>work</h3> -->
 	</div>
-</section> -->
+</section>
 
 <section class="fullBleed work" id="work-link">
 	

@@ -167,8 +167,7 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility; }
 
 .fullBleed {
-  width: 100%;
-  float: left; }
+  width: 100%; }
   .fullBleed .container {
     max-width: 1400px;
     margin: 0 auto;
@@ -178,11 +177,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .fullBleed.sectionTitle {
   text-align: center;
-  background-color: #e0c341;
   color: white; }
   .fullBleed.sectionTitle .container {
     padding: 0;
-    height: 63px; }
+    height: 64px; }
     .fullBleed.sectionTitle .container h3 {
       margin: 0;
       color: #444444; }
@@ -303,7 +301,8 @@ header.fullBleed.headerSection {
   .site-mobileNav .mobileNav {
     display: none;
     cursor: pointer;
-    width: 20px; }
+    width: 20px;
+    height: 25px; }
     .site-mobileNav .mobileNav svg {
       width: 100%;
       color: #444444; }
@@ -397,7 +396,7 @@ nav.main-navigation {
     .site-mobileNav.main-menu .mobileNav {
       display: inline;
       float: right;
-      padding: 6px 10px 0px 0px;
+      padding: 8px 10px 0px 0px;
       width: 25px; } }
 section.hero {
   background-color: #e5e5e5;
@@ -421,7 +420,17 @@ section.hero {
     padding: 48% 0; } }
 @media all and (max-width: 640px) {
   section.hero {
-    padding: 58% 0; } }
+    padding: 43% 0; }
+    section.hero .heroWrap {
+      padding: 10px 0; }
+      section.hero .heroWrap h2 {
+        font-size: 0.85em; }
+      section.hero .heroWrap .myTitle {
+        font-size: 0.65em;
+        line-height: 2em; }
+      section.hero .heroWrap svg {
+        width: 7%;
+        height: 100%; } }
 section.about {
   background-color: #ededed; }
   section.about .container {
@@ -511,19 +520,19 @@ section.about {
 @media all and (max-width: 640px) {
   section.about .container {
     padding: 50px 5% 75px 5%; }
+  section.about p.intro {
+    font-size: 0.85em; }
   section.about .skillSection {
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+  section.about .skillList li {
+    font-size: 0.65em; } }
+.workTitle {
+  background-color: #e5e5e5; }
+
 section.work {
-  color: #171b20; }
+  color: #e5e5e5; }
   section.work .projectPost:nth-child(3n+1) {
-    background-color: #c9a8a3; }
-    section.work .projectPost:nth-child(3n+1) article.projectDescription a {
-      color: #444444;
-      text-decoration: none; }
-      section.work .projectPost:nth-child(3n+1) article.projectDescription a:visited {
-        color: #444444; }
-      section.work .projectPost:nth-child(3n+1) article.projectDescription a:hover {
-        color: #5e5e5e; }
+    background-color: #a36b63; }
     section.work .projectPost:nth-child(3n+1) article.projectDescription footer {
       padding-right: 10%; }
       section.work .projectPost:nth-child(3n+1) article.projectDescription footer ul {
@@ -541,19 +550,19 @@ section.work {
         display: inline-block;
         padding: 10px 15px;
         margin: 0 3px 7px 2px;
-        background-color: #c9a8a3;
+        background-color: #a36b63;
         transition: all 0.2s ease;
         -webkit-transition: all 0.2s ease;
-        color: #2d333e;
-        border: 1px solid #a36b63;
+        color: #22272f;
+        border: 1px solid #835d5c;
         padding: 3px 10px; }
         section.work .projectPost:nth-child(3n+1) article.projectDescription footer li:visited {
-          color: #2d333e; }
+          color: #22272f; }
         section.work .projectPost:nth-child(3n+1) article.projectDescription footer li:hover {
-          color: #2d333e;
-          background-color: #c9a8a3; }
+          color: #22272f;
+          background-color: #a36b63; }
   section.work .projectPost:nth-child(3n+2) {
-    background-color: #e5977f; }
+    background-color: #c86040; }
     section.work .projectPost:nth-child(3n+2) article.projectDescription footer {
       padding-right: 10%; }
       section.work .projectPost:nth-child(3n+2) article.projectDescription footer ul {
@@ -571,26 +580,19 @@ section.work {
         display: inline-block;
         padding: 10px 15px;
         margin: 0 3px 7px 2px;
-        background-color: #e5977f;
+        background-color: #c86040;
         transition: all 0.2s ease;
         -webkit-transition: all 0.2s ease;
         color: #22272f;
-        border: 1px solid #c86040;
+        border: 1px solid #dc7555;
         padding: 3px 10px; }
         section.work .projectPost:nth-child(3n+2) article.projectDescription footer li:visited {
           color: #22272f; }
         section.work .projectPost:nth-child(3n+2) article.projectDescription footer li:hover {
           color: #22272f;
-          background-color: #e5977f; }
+          background-color: #c86040; }
   section.work .projectPost:nth-child(3n+3) {
-    background-color: #92abab; }
-    section.work .projectPost:nth-child(3n+3) article.projectDescription a {
-      color: #444444;
-      text-decoration: none; }
-      section.work .projectPost:nth-child(3n+3) article.projectDescription a:visited {
-        color: #444444; }
-      section.work .projectPost:nth-child(3n+3) article.projectDescription a:hover {
-        color: #444444; }
+    background-color: #008e8e; }
     section.work .projectPost:nth-child(3n+3) article.projectDescription footer {
       padding-right: 10%; }
       section.work .projectPost:nth-child(3n+3) article.projectDescription footer ul {
@@ -608,17 +610,17 @@ section.work {
         display: inline-block;
         padding: 10px 15px;
         margin: 0 3px 7px 2px;
-        background-color: #92abab;
+        background-color: #2ac4c0;
         transition: all 0.2s ease;
         -webkit-transition: all 0.2s ease;
-        color: #2d333e;
-        border: 1px solid #536b6b;
+        color: #00a8a7;
+        border: 1px solid #00a8a7;
         padding: 3px 10px; }
         section.work .projectPost:nth-child(3n+3) article.projectDescription footer li:visited {
-          color: #2d333e; }
+          color: #00a8a7; }
         section.work .projectPost:nth-child(3n+3) article.projectDescription footer li:hover {
-          color: #2d333e;
-          background-color: #92abab; }
+          color: #00a8a7;
+          background-color: #2ac4c0; }
 
 .projectPost {
   display: inline;
@@ -678,6 +680,16 @@ section.work {
     width: 64.58333%;
     margin: 0 1.04167%;
     padding: 1% 2.5% 0 3.5%; }
+    .projectPost article.projectDescription a {
+      color: #ededed;
+      text-decoration: none;
+      border-bottom: 1px dotted #ededed; }
+      .projectPost article.projectDescription a:visited {
+        color: #ededed; }
+      .projectPost article.projectDescription a:hover {
+        color: #444444; }
+      .projectPost article.projectDescription a:hover {
+        border-bottom: 1px dotted #444444; }
     .projectPost article.projectDescription h3 {
       margin-bottom: 10px; }
     .projectPost article.projectDescription h4 {
@@ -688,12 +700,14 @@ section.work {
       text-decoration: none;
       margin: 0; }
     .projectPost article.projectDescription p {
-      font-size: 0.95em;
+      font-size: 1em;
       font-weight: 400;
       line-height: 1.7em;
       letter-spacing: 0.03em;
       text-decoration: none;
-      font-family: 'Noto Sans'; }
+      font-family: 'Noto Sans';
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility; }
 
 @media all and (max-width: 768px) {
   .projectPost div.projectPreview {
@@ -724,6 +738,14 @@ section.work {
     margin: 0 1.04167%;
     margin-top: 12%;
     padding: 1%; } }
+@media all and (max-width: 640px) {
+  .projectPost article.projectDescription {
+    margin-top: 20%; }
+    .projectPost article.projectDescription footer {
+      padding: 5% 5% 0 0; } }
+.blogTitle {
+  background-color: #e0c341; }
+
 .fullBleed.blog {
   background-color: #e9ce4d; }
   .fullBleed.blog .container.blogContainer {
@@ -933,6 +955,8 @@ section.work {
         line-height: 1.6em;
         letter-spacing: 0.02em;
         text-decoration: none; }
+        .fullBleed.singlePage .container main article p + ul {
+          margin-top: 0; }
         .fullBleed.singlePage .container main article ul {
           padding-left: 1em; }
           .fullBleed.singlePage .container main article ul li {
