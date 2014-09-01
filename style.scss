@@ -507,6 +507,9 @@ section.about {
 
 	.otherLinks {
 		margin-top:10px;
+		li {
+			display:inline;
+		}
 		a {
 			@include theHardestButtonToButton ($heroGray,$darkGray,$red,white);
 		}
@@ -539,8 +542,14 @@ section.about {
 		}
 		.skillList {
 			li {
-				font-size: 0.65em;
+				// font-size: 0.65em;
 				// padding: 5px 10px;
+			}
+		}
+		.otherLinks {
+			li {
+				display:block;
+				margin-bottom: 10px;
 			}
 		}
 	}

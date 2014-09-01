@@ -496,6 +496,8 @@ section.about {
           background-color: #be3232; }
   section.about .otherLinks {
     margin-top: 10px; }
+    section.about .otherLinks li {
+      display: inline; }
     section.about .otherLinks a {
       font-size: 0.6em;
       font-weight: 700;
@@ -524,8 +526,9 @@ section.about {
     font-size: 0.85em; }
   section.about .skillSection {
     margin-bottom: 10px; }
-  section.about .skillList li {
-    font-size: 0.65em; } }
+  section.about .otherLinks li {
+    display: block;
+    margin-bottom: 10px; } }
 .workTitle {
   background-color: #e5e5e5; }
 

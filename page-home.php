@@ -84,11 +84,11 @@ get_header(); ?>
 			<?php wp_reset_postdata(); ?>
 			<?php endif; ?>
 			<!-- Other Links Section -->
-			<div class="otherLinks">
-				<a href="mailto:perpetuatingcuriosity@gmail.com" class="otherLink">perpetuatingcuriosity@gmail.com</a>
+			<ul class="otherLinks">
+				<li><a href="mailto:perpetuatingcuriosity@gmail.com" class="otherLink">perpetuatingcuriosity@gmail.com</a></li>
 				<!-- <a href="" class="otherLink">View Resume</a> -->
-				<a href="https://dl.dropboxusercontent.com/u/4917239/AlexandraBain_Resume.pdf" class="otherLink">Resume PDF</a>
-			</div>
+				<li><a href="https://dl.dropboxusercontent.com/u/4917239/AlexandraBain_Resume.pdf" class="otherLink">Resume PDF</a></li>
+			</ul>
 		</div>
 
 
