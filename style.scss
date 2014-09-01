@@ -579,7 +579,7 @@ section.work {
 				}
 				li {
 					@include shiftOva;
-					@include theLessHardButtonToButton($mauveLite, $superDark);
+					@include theLessHardButtonToButton($mauveLite, $darkGray);
 					border: 1px solid $mauve;
 					padding: 3px 10px;
 				}
@@ -598,7 +598,7 @@ section.work {
 					}
 					li {
 						@include shiftOva;
-						@include theLessHardButtonToButton($orangeSalmon, $superDark);
+						@include theLessHardButtonToButton($orangeSalmon, $darkGray);
 						border: 1px solid $orangeSalmonLite;
 						padding: 3px 10px;
 					}
@@ -618,8 +618,8 @@ section.work {
 					}
 					li {
 						@include shiftOva;
-						@include theLessHardButtonToButton($aquaLite, $aqua);
-							border: 1px solid $aqua;
+						@include theLessHardButtonToButton(darken($aqua,5), $darkGray);
+							border: 1px solid $aquaLite;
 						padding: 3px 10px;
 					}
 				}
@@ -876,6 +876,7 @@ section.work {
 	}
 	footer {
 		@include fontify(1em,700);
+		margin-bottom: 5em; 
 	}
 }
 

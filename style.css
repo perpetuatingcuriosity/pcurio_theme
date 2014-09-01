@@ -556,13 +556,13 @@ section.work {
         background-color: #a36b63;
         transition: all 0.2s ease;
         -webkit-transition: all 0.2s ease;
-        color: #22272f;
+        color: #444444;
         border: 1px solid #835d5c;
         padding: 3px 10px; }
         section.work .projectPost:nth-child(3n+1) article.projectDescription footer li:visited {
-          color: #22272f; }
+          color: #444444; }
         section.work .projectPost:nth-child(3n+1) article.projectDescription footer li:hover {
-          color: #22272f;
+          color: #444444;
           background-color: #a36b63; }
   section.work .projectPost:nth-child(3n+2) {
     background-color: #c86040; }
@@ -586,13 +586,13 @@ section.work {
         background-color: #c86040;
         transition: all 0.2s ease;
         -webkit-transition: all 0.2s ease;
-        color: #22272f;
+        color: #444444;
         border: 1px solid #dc7555;
         padding: 3px 10px; }
         section.work .projectPost:nth-child(3n+2) article.projectDescription footer li:visited {
-          color: #22272f; }
+          color: #444444; }
         section.work .projectPost:nth-child(3n+2) article.projectDescription footer li:hover {
-          color: #22272f;
+          color: #444444;
           background-color: #c86040; }
   section.work .projectPost:nth-child(3n+3) {
     background-color: #008e8e; }
@@ -613,17 +613,17 @@ section.work {
         display: inline-block;
         padding: 10px 15px;
         margin: 0 3px 7px 2px;
-        background-color: #2ac4c0;
+        background-color: #008e8e;
         transition: all 0.2s ease;
         -webkit-transition: all 0.2s ease;
-        color: #00a8a7;
-        border: 1px solid #00a8a7;
+        color: #444444;
+        border: 1px solid #2ac4c0;
         padding: 3px 10px; }
         section.work .projectPost:nth-child(3n+3) article.projectDescription footer li:visited {
-          color: #00a8a7; }
+          color: #444444; }
         section.work .projectPost:nth-child(3n+3) article.projectDescription footer li:hover {
-          color: #00a8a7;
-          background-color: #2ac4c0; }
+          color: #444444;
+          background-color: #008e8e; }
 
 .projectPost {
   display: inline;
@@ -882,7 +882,8 @@ section.work {
     font-weight: 700;
     line-height: 1.6em;
     letter-spacing: 0.05em;
-    text-decoration: none; } }
+    text-decoration: none;
+    margin-bottom: 5em; } }
 .fullBleed.singlePage {
   background-color: #f4f3f3; }
   .fullBleed.singlePage header {
