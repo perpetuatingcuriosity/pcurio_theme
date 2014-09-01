@@ -84,7 +84,7 @@
 		</div>
 
 		<!-- MobileNav Icon -->
-		<div class="site-mobileNav main-menu">
+<!-- 		<div class="site-mobileNav main-menu">
 			<div class="mobileNav">
 				<svg viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
 		    	<rect width="11" height="2"/>
@@ -92,7 +92,7 @@
 		    	<rect y="8" width="11" height="2"/>
 		    	</svg>
 			</div>	
-		</div>
+		</div> -->
 
 		<!-- Main Nav -->
 		<nav class="main-navigation" role="navigation">

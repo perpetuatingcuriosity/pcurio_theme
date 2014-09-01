@@ -843,9 +843,10 @@ section.work {
 
 .fullBleed.singlePage {
 	background-color: $blogGray;
+	header {
+		border-bottom: 5px solid $red;
+	}
 	p {
-		@include fontify(1em,400,1.6em,0.02em);
-		font-family: 'Noto Sans',sans-serif;
 		margin: 1.75em 0;
 		color: darken($darkGray,10);
 	}
@@ -859,7 +860,6 @@ section.work {
 		color: $darkGray;
 		margin:0;
 		padding-bottom: 5px;
-		border-bottom: 5px solid $red;
 	}
 	p.single-date {
 		margin: 0.5em 0;
@@ -878,6 +878,7 @@ section.work {
 }
 
 .fullBleed.singlePage {
+	font-family: 'Noto Sans',sans-serif;
 	.container {
 		padding: 15% 10% 10% 4%;
 		aside {
@@ -889,6 +890,7 @@ section.work {
 			@include push(0.8);
 			header {
 				.mobileSubHead {
+					display:none;
 					.single-tagSection {
 						@include fontify(0.75em,700);
 						border-bottom: none;
@@ -897,24 +899,60 @@ section.work {
 
 			}
 			article {
+				@include fontify(1em,400,1.6em,0.02em);
 				blockquote {
 				}
-				ol {
-					font-family:'Noto Sans', sans-serif;
-					strong {
-						font-family:'Noto Sans', sans-serif;
+				ul {
+					padding-left: 1em;
+					li {
+						list-style-type: circle;
 					}
 				}
 				img {
 					max-width: 75%;
 				}
 			}
-			footer {
-
-			}
 
 		}
 	}
+}
+
+//----------------------------------------------------------------
+//MEDIA QUERIES
+
+@media all and (max-width: 640px) {
+	.fullBleed.singlePage {
+		.container {
+			padding: 15% 4% 10% 4%;
+			aside {
+				display:none;
+			}
+			main {
+				@include column(12);
+				header {
+					.mobileSubHead {
+						display:block;
+						p.single-date {
+							@include fontify(0.75em,400);
+							margin-bottom: 30px;
+						}
+					}
+
+				}
+				article {
+
+				}
+
+			}
+		}
+	}
+
+	.fullBleed.blog {
+		.container {
+			padding: 5% 4% 5% 4%;
+		}
+	}
+
 }
 
 
@@ -956,6 +994,7 @@ footer.fullBleed.footerSection {
 
 @media all and (max-width: 640px) {
 	footer.fullBleed.footerSection {
+		@include fontify(1.4em,700,inherit,0.1em);
 		.otherLinks {
 			display:none;
 		}

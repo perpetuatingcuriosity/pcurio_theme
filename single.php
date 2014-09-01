@@ -25,19 +25,8 @@
 			<h2><?php the_title(); ?></h2>
 
 			<div class="mobileSubHead">
-				<p class="single-date"><?php the_date(); ?></p>
-				<div class="single-tagSection">
-				<ul class="single-tags"><?php
-				  $posttags = get_the_tags();
-				  if ($posttags) {
-				    foreach($posttags as $tag) {
-				      echo '<li>' . $tag->name . '</li>'; 
-				    }
-				  }
-				?>
-				</ul>
+				<p class="single-date">Posted on <?php echo get_the_date(); ?></p>
 			</div>
-
 			</header>
 
 
@@ -45,8 +34,6 @@
 				<?php the_content(); ?>
 			</article>
 
-			<footer class="more-posts">
-			</footer>
 		</main>
 		<?php endwhile; // end of the loop. ?>
 	<?php wp_reset_postdata(); ?>
@@ -56,6 +43,11 @@
 <!-- ---------------------------------------------------------------- -->
 
 <!-- BLOG SECTION -->
+<section class="fullBleed sectionTitle blogTitle">
+	<div class="container">
+	</div>
+</section>
+
 <section class="fullBleed blog" id="blog-link">
 	<div class="container">
 		<?php  

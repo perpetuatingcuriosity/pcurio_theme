@@ -860,13 +860,9 @@ section.work {
     text-decoration: none; } }
 .fullBleed.singlePage {
   background-color: #f4f3f3; }
+  .fullBleed.singlePage header {
+    border-bottom: 5px solid #be3232; }
   .fullBleed.singlePage p {
-    font-size: 1em;
-    font-weight: 400;
-    line-height: 1.6em;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    font-family: 'Noto Sans',sans-serif;
     margin: 1.75em 0;
     color: #2b2b2b; }
   .fullBleed.singlePage strong {
@@ -885,8 +881,7 @@ section.work {
     text-decoration: none;
     color: #444444;
     margin: 0;
-    padding-bottom: 5px;
-    border-bottom: 5px solid #be3232; }
+    padding-bottom: 5px; }
   .fullBleed.singlePage p.single-date {
     margin: 0.5em 0; }
   .fullBleed.singlePage .single-tagSection {
@@ -903,38 +898,70 @@ section.work {
       color: #444444;
       margin: 0.75em 0; }
 
-.fullBleed.singlePage .container {
-  padding: 15% 10% 10% 4%; }
-  .fullBleed.singlePage .container aside {
-    display: inline;
-    float: left;
-    width: 14.58333%;
-    margin: 0 1.04167%;
-    font-size: 0.8em;
-    font-weight: 500;
-    line-height: 1.6em;
-    letter-spacing: 0.05em;
-    text-decoration: none; }
-  .fullBleed.singlePage .container main {
-    display: inline;
-    float: left;
-    width: 72.91667%;
-    margin: 0 1.04167%;
-    margin-left: 7.70833%; }
-    .fullBleed.singlePage .container main header .mobileSubHead .single-tagSection {
-      font-size: 0.75em;
-      font-weight: 700;
+.fullBleed.singlePage {
+  font-family: 'Noto Sans',sans-serif; }
+  .fullBleed.singlePage .container {
+    padding: 15% 10% 10% 4%; }
+    .fullBleed.singlePage .container aside {
+      display: inline;
+      float: left;
+      width: 14.58333%;
+      margin: 0 1.04167%;
+      font-size: 0.8em;
+      font-weight: 500;
       line-height: 1.6em;
       letter-spacing: 0.05em;
-      text-decoration: none;
-      border-bottom: none; }
-    .fullBleed.singlePage .container main article ol {
-      font-family: 'Noto Sans', sans-serif; }
-      .fullBleed.singlePage .container main article ol strong {
-        font-family: 'Noto Sans', sans-serif; }
-    .fullBleed.singlePage .container main article img {
-      max-width: 75%; }
+      text-decoration: none; }
+    .fullBleed.singlePage .container main {
+      display: inline;
+      float: left;
+      width: 72.91667%;
+      margin: 0 1.04167%;
+      margin-left: 7.70833%; }
+      .fullBleed.singlePage .container main header .mobileSubHead {
+        display: none; }
+        .fullBleed.singlePage .container main header .mobileSubHead .single-tagSection {
+          font-size: 0.75em;
+          font-weight: 700;
+          line-height: 1.6em;
+          letter-spacing: 0.05em;
+          text-decoration: none;
+          border-bottom: none; }
+      .fullBleed.singlePage .container main article {
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 1.6em;
+        letter-spacing: 0.02em;
+        text-decoration: none; }
+        .fullBleed.singlePage .container main article ul {
+          padding-left: 1em; }
+          .fullBleed.singlePage .container main article ul li {
+            list-style-type: circle; }
+        .fullBleed.singlePage .container main article img {
+          max-width: 75%; }
 
+@media all and (max-width: 640px) {
+  .fullBleed.singlePage .container {
+    padding: 15% 4% 10% 4%; }
+    .fullBleed.singlePage .container aside {
+      display: none; }
+    .fullBleed.singlePage .container main {
+      display: inline;
+      float: left;
+      width: 97.91667%;
+      margin: 0 1.04167%; }
+      .fullBleed.singlePage .container main header .mobileSubHead {
+        display: block; }
+        .fullBleed.singlePage .container main header .mobileSubHead p.single-date {
+          font-size: 0.75em;
+          font-weight: 400;
+          line-height: 1.6em;
+          letter-spacing: 0.05em;
+          text-decoration: none;
+          margin-bottom: 30px; }
+
+  .fullBleed.blog .container {
+    padding: 5% 4% 5% 4%; } }
 footer.fullBleed.footerSection {
   background-color: #e5e5e5; }
   footer.fullBleed.footerSection .container {
@@ -967,15 +994,21 @@ footer.fullBleed.footerSection {
       margin-bottom: 0; }
 
 @media all and (max-width: 640px) {
-  footer.fullBleed.footerSection .otherLinks {
-    display: none; }
-  footer.fullBleed.footerSection .socialIcons {
-    display: inline;
-    float: left;
-    width: 97.91667%;
-    margin: 0 1.04167%; }
-  footer.fullBleed.footerSection .mobileMail {
-    display: inline; } }
+  footer.fullBleed.footerSection {
+    font-size: 1.4em;
+    font-weight: 700;
+    line-height: inherit;
+    letter-spacing: 0.1em;
+    text-decoration: none; }
+    footer.fullBleed.footerSection .otherLinks {
+      display: none; }
+    footer.fullBleed.footerSection .socialIcons {
+      display: inline;
+      float: left;
+      width: 97.91667%;
+      margin: 0 1.04167%; }
+    footer.fullBleed.footerSection .mobileMail {
+      display: inline; } }
 /*RESUME STARTS*/
 .resume {
   padding: 50px 12%;
