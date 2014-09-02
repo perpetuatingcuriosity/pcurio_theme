@@ -434,7 +434,7 @@ section.hero {
 
 @media all and (max-width: 768px) {
 	section.hero {
-		padding: 48% 0;
+		padding: 58% 0;
 	}
 }
 
@@ -535,7 +535,7 @@ section.about {
 			padding: 50px 5% 75px 5%;
 		}
 		p.intro {
-			font-size: 0.85em;
+			// font-size: 0.85em;
 		}
 		.skillSection {
 			margin-bottom: 10px;
@@ -971,7 +971,7 @@ section.work {
 @media all and (max-width: 640px) {
 	.fullBleed.singlePage {
 		.container {
-			padding: 26% 4% 10% 4%;
+			padding: 24% 4% 10% 4%;
 			aside {
 				display:none;
 			}

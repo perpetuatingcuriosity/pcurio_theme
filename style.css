@@ -417,7 +417,7 @@ section.hero {
 
 @media all and (max-width: 768px) {
   section.hero {
-    padding: 48% 0; } }
+    padding: 58% 0; } }
 @media all and (max-width: 640px) {
   section.hero {
     padding: 50% 0; }
@@ -522,8 +522,6 @@ section.about {
 @media all and (max-width: 640px) {
   section.about .container {
     padding: 50px 5% 75px 5%; }
-  section.about p.intro {
-    font-size: 0.85em; }
   section.about .skillSection {
     margin-bottom: 10px; }
   section.about .otherLinks li {
@@ -970,7 +968,7 @@ section.work {
 
 @media all and (max-width: 640px) {
   .fullBleed.singlePage .container {
-    padding: 26% 4% 10% 4%; }
+    padding: 24% 4% 10% 4%; }
     .fullBleed.singlePage .container aside {
       display: none; }
     .fullBleed.singlePage .container main {
