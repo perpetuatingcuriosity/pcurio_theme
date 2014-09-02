@@ -420,7 +420,7 @@ section.hero {
     padding: 48% 0; } }
 @media all and (max-width: 640px) {
   section.hero {
-    padding: 43% 0; }
+    padding: 50% 0; }
     section.hero .heroWrap {
       padding: 10px 0; }
       section.hero .heroWrap h2 {
@@ -970,7 +970,7 @@ section.work {
 
 @media all and (max-width: 640px) {
   .fullBleed.singlePage .container {
-    padding: 15% 4% 10% 4%; }
+    padding: 26% 4% 10% 4%; }
     .fullBleed.singlePage .container aside {
       display: none; }
     .fullBleed.singlePage .container main {
@@ -1023,6 +1023,7 @@ footer.fullBleed.footerSection {
 
 @media all and (max-width: 640px) {
   footer.fullBleed.footerSection {
+    margin-bottom: 0;
     font-size: 1.4em;
     font-weight: 700;
     line-height: inherit;

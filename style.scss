@@ -440,7 +440,7 @@ section.hero {
 
 @media all and (max-width: 640px) {
 	section.hero {
-		padding: 43% 0;
+		padding: 50% 0;
 		.heroWrap {
 			padding: 10px 0;
 			h2 {
@@ -971,7 +971,7 @@ section.work {
 @media all and (max-width: 640px) {
 	.fullBleed.singlePage {
 		.container {
-			padding: 15% 4% 10% 4%;
+			padding: 26% 4% 10% 4%;
 			aside {
 				display:none;
 			}
@@ -1042,6 +1042,7 @@ footer.fullBleed.footerSection {
 
 @media all and (max-width: 640px) {
 	footer.fullBleed.footerSection {
+		margin-bottom: 0;
 		@include fontify(1.4em,700,inherit,0.1em);
 		.otherLinks {
 			display:none;
