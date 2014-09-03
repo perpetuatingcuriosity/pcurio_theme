@@ -375,11 +375,11 @@ nav.main-navigation {
       nav.main-navigation.main-menu ul li {
         width: 100%;
         float: left;
-        margin: 0.75% 0;
-        padding: 2%;
+        margin: 1.25% 0;
+        padding: 15px 20px;
         background-color: #ededed; }
         nav.main-navigation.main-menu ul li a {
-          padding: 10px 15px; }
+          padding: 15px 43%; }
           nav.main-navigation.main-menu ul li a:last-child {
             padding: none; } }
 @media all and (min-width: 769px) {
